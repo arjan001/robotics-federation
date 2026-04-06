@@ -25,7 +25,7 @@ function PrivacyPolicyPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>1. Introduction</h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Stemtrix EA (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates the Inspire Robotics Challenge website and related services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or participate in our programs. We are located at Kabarnet Road off Ngong Road, J2 Jamhuri Cres, Nairobi, Kenya.
+                  The Robotics Federation of Kenya (&quot;we&quot;, &quot;our&quot;, or &quot;us&quot;) operates the Robotics Federation of Kenya website and related services. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or participate in our programs. We are located in Westlands, Nairobi, Kenya.
                 </p>
               </div>
 
@@ -46,7 +46,7 @@ function PrivacyPolicyPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>3. How We Use Your Information</h2>
                 <ul className="space-y-2 text-sm" style={{ color: 'var(--text-secondary)' }}>
-                  <li>To register and manage team participation in the Inspire Robotics Challenge</li>
+                  <li>To register and manage school and team participation in Federation programs</li>
                   <li>To communicate competition schedules, updates, and important announcements</li>
                   <li>To process partnership and sponsorship inquiries</li>
                   <li>To send newsletters and marketing communications (with your consent)</li>
@@ -102,7 +102,7 @@ function PrivacyPolicyPage() {
                   If you have questions about this Privacy Policy or wish to exercise your rights, contact us at:
                 </p>
                 <div className="mt-3 p-4 rounded-lg text-sm" style={{ background: 'var(--bg-secondary)', color: 'var(--text-secondary)' }}>
-                  <p><strong>Stemtrix EA</strong></p>
+                  <p><strong>Robotics Federation of Kenya</strong></p>
                   <p>Kabarnet Road off Ngong Road, J2 Jamhuri Cres, Nairobi, Kenya</p>
                   <p>Phone: +254 728 128 353 / +254 110 394 940</p>
                   <p>Email: info@stemtrixea.org</p>

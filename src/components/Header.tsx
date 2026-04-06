@@ -19,14 +19,14 @@ type NavItem = NavLink | NavGroup
 const navItems: NavItem[] = [
   { label: 'Home', to: '/' },
   { label: 'About', to: '/about' },
-  { label: 'Challenges', to: '/challenges' },
+  { label: 'Programs', to: '/challenges' },
   { label: 'Events', to: '/events' },
   {
     label: 'Ecosystem',
     children: [
-      { label: 'Schools', to: '/schools' },
-      { label: 'Partners & Sponsors', to: '/partners' },
-      { label: 'Organizers', to: '/organizers' },
+      { label: 'Member Schools', to: '/schools' },
+      { label: 'Partners & Affiliates', to: '/partners' },
+      { label: 'Leadership', to: '/organizers' },
     ],
   },
 ]
@@ -38,17 +38,23 @@ export function Header() {
   return (
     <header className="glass-header sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-18">
           {/* Logo */}
-          <Link to="/" className="flex items-center gap-2 no-underline">
-            <img
-              src="/inspire-robotics-logo.jpeg"
-              alt="Inspire Robotics"
-              className="w-12 h-12 rounded-lg object-cover"
-            />
-            <span className="font-bold text-xl hidden sm:block text-white">
-              Inspire Robotics
-            </span>
+          <Link to="/" className="flex items-center gap-3 no-underline">
+            <div
+              className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm"
+              style={{ background: 'var(--accent)' }}
+            >
+              RFK
+            </div>
+            <div className="hidden sm:block">
+              <span className="font-bold text-base leading-tight block" style={{ color: 'var(--text-primary)' }}>
+                Robotics Federation
+              </span>
+              <span className="text-xs leading-tight block" style={{ color: 'var(--text-muted)' }}>
+                of Kenya
+              </span>
+            </div>
           </Link>
 
           {/* Desktop nav */}
@@ -62,25 +68,26 @@ export function Header() {
                   onMouseLeave={() => setEcosystemOpen(false)}
                 >
                   <button
-                    className="px-3 py-2 rounded-lg text-sm font-medium flex items-center gap-1 transition-colors text-white/70 hover:text-white"
-                    style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+                    className="px-3 py-2 rounded-lg text-sm font-medium flex items-center gap-1 transition-colors hover:bg-slate-100"
+                    style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-secondary)' }}
                   >
                     {item.label}
                     <ChevronDown size={14} />
                   </button>
                   {ecosystemOpen && (
                     <div
-                      className="absolute top-full left-0 mt-1 w-52 rounded-lg py-2 shadow-lg border"
+                      className="absolute top-full left-0 mt-1 w-52 rounded-lg py-2 shadow-xl border"
                       style={{
-                        background: 'var(--bg-dark-secondary)',
-                        borderColor: 'rgba(255,255,255,0.1)',
+                        background: '#ffffff',
+                        borderColor: 'var(--border-color)',
                       }}
                     >
                       {item.children.map((child) => (
                         <Link
                           key={child.to}
                           to={child.to}
-                          className="block px-4 py-2 text-sm no-underline text-white/70 hover:text-white transition-colors"
+                          className="block px-4 py-2.5 text-sm no-underline transition-colors hover:bg-slate-50"
+                          style={{ color: 'var(--text-secondary)' }}
                           onClick={() => setEcosystemOpen(false)}
                         >
                           {child.label}
@@ -93,7 +100,8 @@ export function Header() {
                 <Link
                   key={item.label}
                   to={item.to}
-                  className="px-3 py-2 rounded-lg text-sm font-medium no-underline transition-colors text-white/70 hover:text-white"
+                  className="px-3 py-2 rounded-lg text-sm font-medium no-underline transition-colors hover:bg-slate-100"
+                  style={{ color: 'var(--text-secondary)' }}
                 >
                   {item.label}
                 </Link>
@@ -101,10 +109,10 @@ export function Header() {
             )}
             <Link
               to="/register"
-              className="ml-2 px-5 py-2 rounded-lg text-sm font-semibold no-underline text-white transition-colors"
+              className="ml-3 px-5 py-2.5 rounded-lg text-sm font-semibold no-underline text-white transition-colors"
               style={{ background: 'var(--accent)' }}
             >
-              Register Interest
+              Get Involved
             </Link>
           </nav>
 
@@ -112,8 +120,8 @@ export function Header() {
           <div className="flex items-center gap-2 md:hidden">
             <button
               onClick={() => setMobileOpen(!mobileOpen)}
-              className="p-2 text-white"
-              style={{ background: 'none', border: 'none', cursor: 'pointer' }}
+              className="p-2"
+              style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'var(--text-primary)' }}
               aria-label="Toggle menu"
             >
               {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -126,19 +134,20 @@ export function Header() {
       {mobileOpen && (
         <div
           className="md:hidden border-t px-4 py-4 space-y-1"
-          style={{ borderColor: 'rgba(255,255,255,0.1)', background: 'var(--bg-dark)' }}
+          style={{ borderColor: 'var(--border-color)', background: '#ffffff' }}
         >
           {navItems.map((item) =>
             item.children ? (
               <div key={item.label}>
-                <p className="px-3 py-2 text-xs font-semibold uppercase tracking-wider text-white/40">
+                <p className="px-3 py-2 text-xs font-semibold uppercase tracking-wider" style={{ color: 'var(--text-muted)' }}>
                   {item.label}
                 </p>
                 {item.children.map((child) => (
                   <Link
                     key={child.to}
                     to={child.to}
-                    className="block px-6 py-2 text-sm no-underline rounded-lg text-white/70"
+                    className="block px-6 py-2 text-sm no-underline rounded-lg"
+                    style={{ color: 'var(--text-secondary)' }}
                     onClick={() => setMobileOpen(false)}
                   >
                     {child.label}
@@ -149,7 +158,8 @@ export function Header() {
               <Link
                 key={item.label}
                 to={item.to}
-                className="block px-3 py-2 text-sm font-medium no-underline rounded-lg text-white/70"
+                className="block px-3 py-2 text-sm font-medium no-underline rounded-lg"
+                style={{ color: 'var(--text-secondary)' }}
                 onClick={() => setMobileOpen(false)}
               >
                 {item.label}
@@ -162,7 +172,7 @@ export function Header() {
             style={{ background: 'var(--accent)' }}
             onClick={() => setMobileOpen(false)}
           >
-            Register Interest
+            Get Involved
           </Link>
         </div>
       )}

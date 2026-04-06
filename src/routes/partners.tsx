@@ -19,7 +19,7 @@ const typeIcons: Record<string, ReactNode> = {
 const typeLabels: Record<string, string> = {
   sponsor: 'Sponsor',
   technology: 'Technology Partner',
-  educational: 'Educational Partner',
+  educational: 'Education Partner',
   media: 'Media Partner',
 }
 
@@ -33,17 +33,17 @@ function PartnersPage() {
       <section className="py-24 px-4 text-center" style={{ background: 'var(--bg-dark)' }}>
         <FadeIn>
           <p className="text-sm text-white/50 uppercase tracking-widest mb-4">Home &mdash; Partners</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-white">Partners & Sponsors</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white">Partners & Affiliates</h1>
           <p className="mt-4 max-w-2xl mx-auto" style={{ color: 'var(--text-on-dark-secondary)' }}>
-            The organizations making the Inspire Robotics Challenge possible across Kenya.
+            The organizations powering Kenya's STEM and robotics ecosystem through the Robotics Federation of Kenya.
           </p>
         </FadeIn>
       </section>
 
       {/* Stats bar */}
-      <section className="border-b" style={{ background: 'var(--bg-primary)', borderColor: 'var(--border-subtle, #e5e7eb)' }}>
+      <section className="border-b" style={{ background: 'var(--bg-primary)', borderColor: 'var(--border-color)' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x" style={{ borderColor: 'var(--border-subtle, #e5e7eb)' }}>
+          <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x" style={{ borderColor: 'var(--border-color)' }}>
             <FadeIn>
               <div className="py-10 px-6 text-center">
                 <p className="text-4xl md:text-5xl font-bold mb-1" style={{ color: 'var(--accent)' }}>
@@ -65,10 +65,10 @@ function PartnersPage() {
             <FadeIn delay={0.2}>
               <div className="py-10 px-6 text-center">
                 <p className="text-4xl md:text-5xl font-bold mb-1" style={{ color: 'var(--accent)' }}>
-                  15+
+                  200+
                 </p>
                 <p className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>Schools Supported</p>
-                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Through partner contributions</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Through Federation partnerships</p>
               </div>
             </FadeIn>
           </div>
@@ -84,7 +84,7 @@ function PartnersPage() {
                 Our Partners
               </h2>
               <p className="max-w-xl mx-auto text-sm" style={{ color: 'var(--text-muted)' }}>
-                Organizations driving STEM innovation and robotics education across Kenya.
+                Organizations working alongside the Federation to advance robotics and STEM education across Kenya.
               </p>
             </div>
           </FadeIn>
@@ -95,7 +95,7 @@ function PartnersPage() {
                 <div
                   className="rounded-xl border p-5 h-full flex flex-col items-center text-center transition-shadow hover:shadow-lg"
                   style={{
-                    borderColor: 'var(--border-subtle, #e5e7eb)',
+                    borderColor: 'var(--border-color)',
                     background: 'var(--bg-primary)',
                   }}
                 >
@@ -103,7 +103,7 @@ function PartnersPage() {
                   <div
                     className="w-16 h-16 rounded-xl flex items-center justify-center mb-4"
                     style={{
-                      background: 'var(--bg-secondary)',
+                      background: 'var(--accent-light)',
                       color: 'var(--accent)',
                     }}
                   >
@@ -117,7 +117,7 @@ function PartnersPage() {
                   <span
                     className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full mb-3"
                     style={{
-                      background: 'rgba(194, 75, 59, 0.08)',
+                      background: 'var(--accent-light)',
                       color: 'var(--accent)',
                     }}
                   >
@@ -144,10 +144,10 @@ function PartnersPage() {
           <FadeIn className="mt-16">
             <div className="p-8 md:p-12 rounded-xl text-center" style={{ background: 'var(--bg-dark)' }}>
               <h3 className="text-xl font-bold mb-3 text-white">
-                Become a Partner
+                Become a Federation Partner
               </h3>
               <p className="mb-6 max-w-lg mx-auto" style={{ color: 'var(--text-on-dark-secondary)' }}>
-                Interested in supporting STEM education in Kenya? Join the Inspire Robotics Challenge as a partner or sponsor.
+                Interested in supporting STEM education in Kenya? Join the Robotics Federation of Kenya as a partner, sponsor, or affiliate organization.
               </p>
               <a
                 href="/register"

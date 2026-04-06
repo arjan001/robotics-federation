@@ -31,45 +31,45 @@ export type ContentStore = Record<ContentModuleName, ContentRecord[]>
 const aboutFaqs = [
   {
     id: 'faq-join',
-    question: 'How do students join Inspire Robotics programs?',
+    question: 'How can a school join the Robotics Federation of Kenya?',
     answer:
-      'Schools and independent teams register by track, complete onboarding, and receive challenge guides, calendars, and mentor matching before build sessions begin.',
+      'Schools can register through our website or contact the Federation directly. We provide a structured onboarding process that includes needs assessment, program design, equipment guidance, teacher training, and connection to local competition circuits.',
   },
   {
     id: 'faq-experience',
-    question: 'Do participants need prior robotics experience?',
+    question: 'Do schools need existing STEM infrastructure to participate?',
     answer:
-      'No. Tracks are age-appropriate and skill-staged. Students can start from basic exploration and progress into advanced strategy, automation, and programming challenges.',
+      'No. The Federation works with partner organizations like Stemtrix EA and Inspire Robotics Challenge to help schools start from scratch. We provide frameworks for setting up robotics clubs, sourcing equipment, and training teachers.',
   },
   {
     id: 'faq-outcomes',
-    question: 'What outcomes are tracked across a season?',
+    question: 'What outcomes does the Federation track?',
     answer:
-      'Programs track technical capability, teamwork, documentation quality, challenge completion, and presentation readiness so schools can measure growth beyond final scores.',
+      'We measure student enrollment in STEM programs, competition participation rates, teacher certification in robotics pedagogy, county-level coverage, and long-term career pathway tracking for participating students.',
   },
   {
     id: 'faq-partners',
-    question: 'How can schools or partners collaborate with Stemtrix EA?',
+    question: 'How can organizations partner with the Federation?',
     answer:
-      'Partners can support kits, mentoring, workshops, venue access, and scholarships. Schools can host qualifiers, open labs, and join multi-city season rollouts.',
+      'We welcome partnerships from technology companies, NGOs, educational institutions, and government bodies. Partners can support through funding, equipment donations, mentorship, curriculum development, or hosting regional events.',
   },
   {
     id: 'faq-cost',
-    question: 'What is the cost to participate?',
+    question: 'What is the cost for schools to participate?',
     answer:
-      'Registration fees vary by track and region. Scholarship programs and sponsor-backed entries are available for schools in underserved areas.',
+      'Membership fees vary by school type and region. Scholarship programs and sponsor-backed entries are available for schools in underserved areas through our Inclusive STEM Pathways program.',
   },
   {
     id: 'faq-age',
-    question: 'What age groups can participate?',
+    question: 'What age groups do Federation programs cover?',
     answer:
-      'The competition is open to students ages 6-18, divided into three tracks: Explore (6-10), Innovators (11-14), and Challengers (15-18).',
+      'Federation programs cover students ages 6-18, aligned with the CBC framework: Discovery (6-10), Innovators (11-14), and Advanced (15-18).',
   },
   {
     id: 'faq-equipment',
-    question: 'Do teams need their own robotics equipment?',
+    question: 'Do schools need their own robotics equipment?',
     answer:
-      'Teams can bring their own equipment or request starter kits. Schools partnered with Stemtrix EA often have shared lab resources available.',
+      'Schools can use their own equipment or access subsidized kits through Federation partners. We also connect schools with equipment sharing programs and donated resources.',
   },
 ]
 
@@ -89,8 +89,8 @@ const categories = [
 ]
 
 const users = [
-  { id: 'user-admin', name: 'Admin User', email: 'admin@inspirerobotics.org', role: 'Super Admin', status: 'Active' },
-  { id: 'user-editor', name: 'Content Editor', email: 'editor@inspirerobotics.org', role: 'Editor', status: 'Active' },
+  { id: 'user-admin', name: 'Admin User', email: 'admin@roboticsfederationkenya.org', role: 'Super Admin', status: 'Active' },
+  { id: 'user-editor', name: 'Content Editor', email: 'editor@roboticsfederationkenya.org', role: 'Editor', status: 'Active' },
 ]
 
 const permissions = [
@@ -102,53 +102,53 @@ const permissions = [
 const settings = [
   {
     id: 'site',
-    siteName: 'Inspire Robotics Challenge',
-    organizationName: 'Stemtrix EA',
-    siteTagline: "East Africa's Premier Robotics & AI Competition",
-    contactEmail: 'hello@inspirerobotics.org',
+    siteName: 'Robotics Federation of Kenya',
+    organizationName: 'Robotics Federation of Kenya',
+    siteTagline: 'The National Governing Body for Robotics & STEM Education',
+    contactEmail: 'info@roboticsfederationkenya.org',
   },
 ]
 
 const footer = [
   {
     id: 'footer-main',
-    tagline: 'Inspiring the next generation of African innovators through robotics and AI.',
-    copyright: '© 2026 Inspire Robotics Challenge by Stemtrix EA. All rights reserved.',
-    email: 'stemtrix@gmail.com',
+    tagline: 'Advancing robotics and STEM education for every Kenyan learner.',
+    copyright: '© 2026 Robotics Federation of Kenya. All rights reserved.',
+    email: 'info@roboticsfederationkenya.org',
   },
 ]
 
 const home = [
   {
     id: 'home-main',
-    heroTitle: 'Inspire Robotics Challenge',
+    heroTitle: 'Robotics Federation of Kenya',
     heroSubtitle:
-      "East Africa's premier robotics and AI competition hub. Empowering young minds to build, innovate, and shape the future through technology.",
-    primaryCtaLabel: 'Register Your Team',
-    primaryCtaHref: '/register',
-    secondaryCtaLabel: 'Explore Challenges',
-    secondaryCtaHref: '/challenges',
+      'Uniting schools, organizations, and industry partners to build a robust STEM and robotics ecosystem that prepares every Kenyan learner for the future.',
+    primaryCtaLabel: 'Learn About Our Mission',
+    primaryCtaHref: '/about',
+    secondaryCtaLabel: 'Get Involved',
+    secondaryCtaHref: '/register',
   },
 ]
 
 const register = [
   {
     id: 'register-main',
-    title: 'Registration Hub',
-    subtitle: 'Register your team for the competition or express interest as a partner.',
-    teamTitle: 'Team Registration',
-    teamDescription: 'Register your school team for the next season of the Inspire Robotics Challenge.',
+    title: 'Get Involved',
+    subtitle: 'Register your school with the Federation or express interest as a partner organization.',
+    teamTitle: 'School Registration',
+    teamDescription: 'Register your school to join the Robotics Federation of Kenya and access STEM programs, competitions, and resources.',
     partnerTitle: 'Partner Interest',
-    partnerDescription: 'Interested in sponsoring or partnering with the Inspire Robotics Challenge?',
+    partnerDescription: 'Interested in partnering with or sponsoring the Robotics Federation of Kenya?',
   },
 ]
 
 const aboutContent = [
   {
     id: 'about-main',
-    title: 'Built for future innovators. Designed for measurable impact.',
+    title: 'The national body advancing robotics and STEM for every Kenyan learner.',
     subtitle:
-      'Stemtrix EA runs a competition-first learning ecosystem where students build real robotics skills, mentors shape team growth, and schools gain a structured path to future-ready STEM outcomes.',
+      'The Robotics Federation of Kenya coordinates, standardizes, and grows the national ecosystem for robotics and STEM education — connecting government, schools, industry, and competition organizers under one unified framework.',
   },
 ]
 

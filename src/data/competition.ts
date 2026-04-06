@@ -18,19 +18,19 @@ export interface RubricCategory {
 
 export const competitionTracks: CompetitionTrack[] = [
   {
-    id: 'explore',
-    name: 'Explore',
-    tagline: 'Discover the World of Robotics',
-    ageRange: 'Ages 6–10',
+    id: 'discovery',
+    name: 'Discovery',
+    tagline: 'Introduction to Robotics & STEM',
+    ageRange: 'Ages 6–10 (Lower Primary)',
     description:
-      'The Explore track introduces young learners to the fundamentals of robotics and programming through hands-on building and creative play. Teams work together to build simple machines and tell stories through their robot models.',
-    color: '#c24b3b',
+      'The Discovery program introduces young learners to the fundamentals of robotics, coding, and scientific thinking through hands-on building and creative play. Aligned with the CBC framework for lower primary, students develop curiosity, teamwork, and basic engineering concepts.',
+    color: '#1d4ed8',
     icon: '🔍',
     missions: [
-      'Build a robot that can navigate a simple maze',
-      'Create a model that demonstrates a real-world machine',
-      'Design a robot helper for your school or community',
-      'Program a robot to perform a choreographed dance',
+      'Build a simple machine that solves a classroom problem',
+      'Program a robot to follow a path and complete a task',
+      'Design a model that demonstrates a science concept',
+      'Create a robot helper for your school or community',
     ],
     rubric: [
       {
@@ -74,17 +74,17 @@ export const competitionTracks: CompetitionTrack[] = [
   {
     id: 'innovators',
     name: 'Innovators',
-    tagline: 'Engineer Solutions That Matter',
-    ageRange: 'Ages 11–14',
+    tagline: 'Engineering Solutions for Kenya',
+    ageRange: 'Ages 11–14 (Upper Primary / Junior Secondary)',
     description:
-      'The Innovators track challenges students to identify real-world problems and engineer robotic solutions. Teams research, design, build, and program autonomous robots while developing core STEM skills and presenting their innovations.',
-    color: '#a33830',
+      'The Innovators program challenges students to identify real problems in their communities and engineer robotic solutions. Teams research, design, build, and program autonomous robots while developing core STEM skills aligned with the CBC upper primary and junior secondary curriculum.',
+    color: '#1e40af',
     icon: '💡',
     missions: [
       'Design an autonomous robot for agricultural assistance',
-      'Build a sorting robot for waste management',
+      'Build a sorting system for waste management',
       'Create a robot that assists people with disabilities',
-      'Engineer a search-and-rescue robot prototype',
+      'Engineer a water quality monitoring prototype',
     ],
     rubric: [
       {
@@ -119,27 +119,27 @@ export const competitionTracks: CompetitionTrack[] = [
         name: 'Core Values',
         maxPoints: 20,
         criteria: [
-          'Gracious professionalism',
-          'Team collaboration',
-          'Mentorship and outreach',
+          'Teamwork and collaboration',
+          'Community engagement',
+          'Mentorship and peer learning',
         ],
       },
     ],
   },
   {
-    id: 'challengers',
-    name: 'Challengers',
-    tagline: 'Push the Boundaries of Innovation',
-    ageRange: 'Ages 15–18',
+    id: 'advanced',
+    name: 'Advanced',
+    tagline: 'Pushing the Boundaries of Innovation',
+    ageRange: 'Ages 15–18 (Senior Secondary)',
     description:
-      'The Challengers track is the pinnacle of the Inspire Robotics Challenge. High school teams design, build, and program advanced robots to compete in strategic alliance-based matches while demonstrating leadership, entrepreneurship, and engineering excellence.',
-    color: '#8b2e26',
+      'The Advanced program is the highest level of Federation-sanctioned competition. Senior secondary teams design, build, and program complex robots for strategic alliance-based matches while demonstrating leadership, entrepreneurship, and engineering excellence. Top performers represent Kenya at international events.',
+    color: '#172554',
     icon: '🏆',
     missions: [
       'Build a robot capable of autonomous and driver-controlled operations',
       'Complete strategic game objectives in alliance matches',
-      'Design and implement computer vision for object detection',
-      'Develop a business plan and secure team sponsorships',
+      'Implement computer vision for object detection and navigation',
+      'Develop a sustainability plan for your school STEM program',
     ],
     rubric: [
       {
@@ -163,12 +163,12 @@ export const competitionTracks: CompetitionTrack[] = [
         ],
       },
       {
-        name: 'Innovation & Entrepreneurship',
+        name: 'Innovation & Leadership',
         maxPoints: 20,
         criteria: [
-          'Business plan and sustainability',
+          'Program sustainability plan',
           'Community outreach impact',
-          'Technical documentation',
+          'Technical documentation quality',
         ],
       },
       {

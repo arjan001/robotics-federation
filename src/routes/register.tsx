@@ -37,12 +37,12 @@ function RegisterPage() {
   }>('register', [
     {
       id: 'register-main',
-      title: 'Registration Hub',
-      subtitle: 'Register your team for the competition or express interest as a partner.',
-      teamTitle: 'Team Registration',
-      teamDescription: 'Register your school team for the next season of the Inspire Robotics Challenge.',
+      title: 'Get Involved',
+      subtitle: 'Register your school with the Federation or express interest as a partner organization.',
+      teamTitle: 'School Registration',
+      teamDescription: 'Register your school to join the Robotics Federation of Kenya and access STEM programs, competitions, and resources.',
       partnerTitle: 'Partner Interest',
-      partnerDescription: 'Interested in sponsoring or partnering with the Inspire Robotics Challenge?',
+      partnerDescription: 'Interested in partnering with or sponsoring the Robotics Federation of Kenya?',
     },
   ])
   const copy = registerItems[0]
@@ -134,7 +134,7 @@ function RegistrationCard({
     >
       <div
         className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110"
-        style={{ background: 'rgba(194, 75, 59, 0.1)', color: 'var(--accent)' }}
+        style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}
       >
         {icon}
       </div>
@@ -242,12 +242,12 @@ function TeamRegistration() {
           Registration Submitted!
         </h3>
         <p className="max-w-md mx-auto" style={{ color: 'var(--text-secondary)' }}>
-          Thank you for registering <strong>{form.teamName}</strong>. The Stemtrix EA team will review your
+          Thank you for registering <strong>{form.teamName}</strong>. The Federation team will review your
           application and contact you within 5 business days at <strong>{form.email}</strong>.
         </p>
         <div
           className="mt-6 inline-block px-4 py-2 rounded-lg text-sm"
-          style={{ background: 'rgba(194, 75, 59, 0.1)', color: 'var(--accent)' }}
+          style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}
         >
           Reference: Your registration is being processed
         </div>
@@ -387,8 +387,8 @@ function TeamRegistration() {
                 {form.coachName && <ReviewRow label="Coach" value={form.coachName} />}
               </div>
             </div>
-            <div className="p-4 rounded-xl text-sm" style={{ background: 'rgba(194, 75, 59, 0.08)', color: 'var(--accent)', border: '1px solid rgba(194, 75, 59, 0.15)' }}>
-              By submitting, you agree to the Inspire Robotics Challenge competition guidelines and code of conduct.
+            <div className="p-4 rounded-xl text-sm" style={{ background: 'var(--accent-light)', color: 'var(--accent)', border: '1px solid var(--accent)' }}>
+              By submitting, you agree to the Robotics Federation of Kenya program guidelines and code of conduct.
             </div>
           </div>
         )}

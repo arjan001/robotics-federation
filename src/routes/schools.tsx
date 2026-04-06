@@ -18,9 +18,9 @@ function SchoolsPage() {
       <section className="py-24 px-4 text-center" style={{ background: 'var(--bg-dark)' }}>
         <FadeIn>
           <p className="text-sm text-white/50 uppercase tracking-widest mb-4">Home &mdash; Schools</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-white">Partner Schools</h1>
+          <h1 className="text-4xl md:text-6xl font-bold text-white">Member Schools</h1>
           <p className="mt-4 max-w-2xl mx-auto" style={{ color: 'var(--text-on-dark-secondary)' }}>
-            Schools across Kenya partnering with us to bring world-class STEM education to their students.
+            Schools across Kenya registered with the Robotics Federation to deliver structured STEM and robotics programs.
           </p>
         </FadeIn>
       </section>
@@ -34,8 +34,8 @@ function SchoolsPage() {
                 <p className="text-4xl md:text-5xl font-bold mb-1" style={{ color: 'var(--accent)' }}>
                   {stats.schoolsReached}+
                 </p>
-                <p className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>Partner Schools</p>
-                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Leading institutions across Kenya</p>
+                <p className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>Member Schools</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Registered with the Federation</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
@@ -66,10 +66,10 @@ function SchoolsPage() {
           <FadeIn>
             <div className="text-center mb-14">
               <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
-                Trusted by Kenya&apos;s Best
+                Federation Member Schools
               </h2>
               <p className="max-w-xl mx-auto text-sm" style={{ color: 'var(--text-muted)' }}>
-                Schools across Kenya partnering with us to bring world-class STEM education to their students.
+                Schools across Kenya delivering robotics and STEM programs through the Federation network.
               </p>
             </div>
           </FadeIn>
@@ -107,7 +107,7 @@ function SchoolsPage() {
                   <span
                     className="inline-flex items-center gap-1 text-xs px-2.5 py-1 rounded-full mt-auto"
                     style={{
-                      background: 'rgba(194, 75, 59, 0.08)',
+                      background: 'var(--accent-light)',
                       color: 'var(--accent)',
                     }}
                   >
@@ -129,7 +129,7 @@ function SchoolsPage() {
               Want your school to join?
             </h3>
             <p className="mb-6 text-sm" style={{ color: 'var(--text-secondary)' }}>
-              Register your school for the next Inspire Robotics Challenge season and give your students hands-on STEM experience.
+              Register your school with the Robotics Federation of Kenya and give your students access to structured STEM programs, competitions, and mentorship.
             </p>
             <a
               href="/register"

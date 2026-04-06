@@ -20,93 +20,91 @@ function AboutPage() {
   const { items: dynamicFaqs } = useContentModule<{ id: string; question: string; answer: string }>('about-faqs', [
     {
       id: 'faq-join',
-      question: 'How do students join Inspire Robotics programs?',
+      question: 'How can a school join the Robotics Federation of Kenya?',
       answer:
-        'Schools and independent teams register by track, complete onboarding, and receive challenge guides, calendars, and mentor matching before build sessions begin.',
+        'Schools can register through our website or contact the Federation directly. We provide a structured onboarding process that includes needs assessment, program design, equipment guidance, teacher training, and connection to local competition circuits.',
     },
     {
       id: 'faq-experience',
-      question: 'Do participants need prior robotics experience?',
+      question: 'Do schools need existing STEM infrastructure to participate?',
       answer:
-        'No. Tracks are age-appropriate and skill-staged. Students can start from basic exploration and progress into advanced strategy, automation, and programming challenges.',
+        'No. The Federation works with partner organizations like Stemtrix EA and Inspire Robotics Challenge to help schools start from scratch. We provide frameworks for setting up robotics clubs, sourcing equipment, and training teachers regardless of the school\'s current capacity.',
     },
     {
       id: 'faq-outcomes',
-      question: 'What outcomes are tracked across a season?',
+      question: 'What outcomes does the Federation track?',
       answer:
-        'Programs track technical capability, teamwork, documentation quality, challenge completion, and presentation readiness so schools can measure growth beyond final scores.',
+        'We measure student enrollment in STEM programs, competition participation rates, teacher certification in robotics pedagogy, county-level coverage, and long-term career pathway tracking for participating students.',
     },
     {
       id: 'faq-partners',
-      question: 'How can schools or partners collaborate with Stemtrix EA?',
+      question: 'How can organizations partner with the Federation?',
       answer:
-        'Partners can support kits, mentoring, workshops, venue access, and scholarships. Schools can host qualifiers, open labs, and join multi-city season rollouts.',
+        'We welcome partnerships from technology companies, NGOs, educational institutions, and government bodies. Partners can support through funding, equipment donations, mentorship, curriculum development, or hosting regional events.',
     },
   ])
   const { items: aboutContent } = useContentModule<{ id: string; title: string; subtitle: string }>('about-content', [
     {
       id: 'about-main',
-      title: 'Built for future innovators. Designed for measurable impact.',
+      title: 'The national body advancing robotics and STEM for every Kenyan learner.',
       subtitle:
-        'Stemtrix EA runs a competition-first learning ecosystem where students build real robotics skills, mentors shape team growth, and schools gain a structured path to future-ready STEM outcomes.',
+        'The Robotics Federation of Kenya coordinates, standardizes, and grows the national ecosystem for robotics and STEM education — connecting government, schools, industry, and competition organizers under one unified framework.',
     },
   ])
   const aboutCopy = aboutContent[0]
 
   return (
     <div style={{ background: 'var(--bg-secondary)' }}>
-      <section className="px-4 py-24 border-b" style={{ borderColor: '#d9d6d1' }}>
+      <section className="px-4 py-24 border-b" style={{ borderColor: 'var(--border-color)' }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
               Home - About Us
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold max-w-4xl leading-[1.04]" style={serifHeading}>
+            <h1 className="text-4xl md:text-6xl font-bold max-w-4xl leading-tight" style={serifHeading}>
               {aboutCopy?.title}
             </h1>
-            <p className="mt-6 text-base leading-8 max-w-2xl" style={{ color: '#2f3a46' }}>
+            <p className="mt-6 text-base leading-8 max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
               {aboutCopy?.subtitle}
             </p>
           </FadeIn>
         </div>
       </section>
 
-      <section className="px-4 py-20 border-b" style={{ borderColor: '#d9d6d1' }}>
+      <section className="px-4 py-20 border-b" style={{ borderColor: 'var(--border-color)' }}>
         <div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-10 items-stretch">
           <FadeIn>
             <div className="h-full flex flex-col justify-center pr-0 lg:pr-8">
               <p className="text-sm mb-5" style={{ color: 'var(--accent)' }}>
-                Why this platform exists
+                Why the Federation exists
               </p>
-              <h2 className="text-4xl md:text-6xl font-bold leading-[1.08] mb-7" style={serifHeading}>
-                A STEM movement grounded in access, rigor, and creativity.
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-7" style={serifHeading}>
+                A unified voice for STEM and robotics education in Kenya.
               </h2>
-              <p className="text-base leading-8 mb-5" style={{ color: '#2f3a46' }}>
-                The mission is to make robotics and AI education practical, inclusive, and deeply engaging across
-                East Africa through year-round mentoring, challenge-based learning, and high-quality competitions.
+              <p className="text-base leading-8 mb-5" style={{ color: 'var(--text-secondary)' }}>
+                Kenya has a growing ecosystem of robotics programs, competitions, and STEM initiatives — but until now, there has been no central body to coordinate standards, ensure equitable access, or represent the sector at national policy level. The Robotics Federation of Kenya was established to fill that gap.
               </p>
-              <p className="text-base leading-8 pl-4" style={{ color: '#2f3a46', borderLeft: '2px solid rgba(194,75,59,0.45)' }}>
-                Programs are built to move students from curiosity to execution with clear technical progression and
-                real-world problem solving at the center of every season.
+              <p className="text-base leading-8 pl-4" style={{ color: 'var(--text-secondary)', borderLeft: '2px solid var(--accent)' }}>
+                We bring together competition organizers like Inspire Robotics Challenge, education providers like Stemtrix East Africa, government bodies, and corporate partners to create a cohesive national strategy for STEM development.
               </p>
             </div>
           </FadeIn>
 
           <FadeIn delay={0.1}>
-            <div className="relative min-h-[560px] overflow-hidden" style={{ border: '1px solid #d9d6d1' }}>
+            <div className="relative min-h-[560px] overflow-hidden rounded-xl" style={{ border: '1px solid var(--border-color)' }}>
               <img
                 src="/education-tech-royaltyfree.jpg"
-                alt="AI and robotics education"
+                alt="STEM education in Kenya"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, rgba(15,19,28,0.8), rgba(15,19,28,0.2) 58%, rgba(15,19,28,0.65))' }} />
+              <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, rgba(15,23,42,0.85), rgba(15,23,42,0.2) 58%, rgba(15,23,42,0.7))' }} />
               <div className="absolute left-6 right-6 bottom-6 space-y-5">
                 {[
-                  'Regional school partnerships and mentor ecosystems',
-                  'Track-based progression from beginner to advanced',
-                  'Competition formats aligned to practical STEM outcomes',
+                  'National coordination of robotics and STEM activities',
+                  'Equitable access from Nairobi to rural counties',
+                  'Alignment with the Competency-Based Curriculum framework',
                 ].map((point) => (
-                  <div key={point} className="text-sm text-white/90 leading-7 pl-4" style={{ borderLeft: '2px solid rgba(194,75,59,0.7)' }}>
+                  <div key={point} className="text-sm text-white/90 leading-7 pl-4" style={{ borderLeft: '2px solid var(--accent)' }}>
                     {point}
                   </div>
                 ))}
@@ -116,49 +114,49 @@ function AboutPage() {
         </div>
       </section>
 
-      <section className="px-4 py-20 border-b" style={{ borderColor: '#d9d6d1' }}>
+      <section className="px-4 py-20 border-b" style={{ borderColor: 'var(--border-color)' }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
-              The operating framework
+              How we operate
             </p>
-            <h2 className="text-4xl md:text-6xl max-w-3xl mb-12 font-bold leading-[1.08]" style={serifHeading}>
-              How the organization delivers consistency at scale.
+            <h2 className="text-3xl md:text-5xl max-w-3xl mb-12 font-bold leading-tight" style={serifHeading}>
+              The Federation's operating framework.
             </h2>
           </FadeIn>
 
-          <div className="border-t" style={{ borderColor: '#d9d6d1' }}>
+          <div className="border-t" style={{ borderColor: 'var(--border-color)' }}>
             {[
               {
                 number: '1',
-                title: 'Mission Alignment',
-                body: 'Learning design is grounded in inclusion, practical engineering, and student-led innovation with measurable educational outcomes.',
+                title: 'Policy & Standards',
+                body: 'We develop and maintain national standards for robotics education, competition rules, safety protocols, and teacher certification in collaboration with the Ministry of Education and KICD.',
               },
               {
                 number: '2',
-                title: 'Program Architecture',
-                body: 'Each season uses defined tracks, mission briefs, skill rubrics, and coaching loops so every team gets a clear progression path.',
+                title: 'Program Coordination',
+                body: 'We coordinate the activities of affiliated organizations — from Inspire Robotics Challenge events to Stemtrix EA training programs — ensuring alignment with national goals and avoiding duplication of effort.',
               },
               {
                 number: '3',
-                title: 'Regional Execution',
-                body: 'Schools, mentors, and partners coordinate through local hubs to run workshops, qualifiers, and cross-city knowledge sharing.',
+                title: 'Regional Development',
+                body: 'Through county-level coordinators and regional hubs, we extend STEM programs beyond Nairobi to ensure students in Mombasa, Kisumu, Nakuru, Eldoret, and rural areas have equal access.',
               },
               {
                 number: '4',
-                title: 'Impact Measurement',
-                body: 'Performance is evaluated using participation quality, challenge completion, innovation depth, and long-term STEM pathway retention.',
+                title: 'Impact & Accountability',
+                body: 'We track participation metrics, student outcomes, teacher readiness, and competition standards to provide transparent reporting to stakeholders and continuously improve programs.',
               },
             ].map((item) => (
               <FadeIn key={item.number}>
-                <div className="py-10 md:py-12 border-b grid md:grid-cols-[90px_1.2fr_1fr] gap-6 md:gap-10" style={{ borderColor: '#d9d6d1' }}>
-                  <p className="text-6xl text-[rgba(194,75,59,0.7)] leading-none font-bold" style={serifHeading}>
+                <div className="py-10 md:py-12 border-b grid md:grid-cols-[90px_1.2fr_1fr] gap-6 md:gap-10" style={{ borderColor: 'var(--border-color)' }}>
+                  <p className="text-5xl font-bold leading-none" style={{ color: 'var(--accent)', opacity: 0.5, ...serifHeading }}>
                     {item.number}
                   </p>
-                  <h3 className="text-3xl font-bold leading-[1.2]" style={serifHeading}>
+                  <h3 className="text-2xl md:text-3xl font-bold leading-tight" style={serifHeading}>
                     {item.title}
                   </h3>
-                  <p className="text-base leading-8 pl-4" style={{ color: '#2f3a46', borderLeft: '2px solid rgba(194,75,59,0.45)' }}>
+                  <p className="text-base leading-8 pl-4" style={{ color: 'var(--text-secondary)', borderLeft: '2px solid var(--accent)' }}>
                     {item.body}
                   </p>
                 </div>
@@ -172,45 +170,43 @@ function AboutPage() {
         className="px-4 py-20 border-b"
         style={{
           borderColor: 'rgba(255,255,255,0.14)',
-          background:
-            'radial-gradient(circle at 12% 8%, rgba(194,75,59,0.14), transparent 42%), radial-gradient(circle at 92% 92%, rgba(194,75,59,0.1), transparent 38%), linear-gradient(145deg, #121421 0%, #16192b 52%, #131b35 100%)',
+          background: 'var(--bg-dark)',
         }}
       >
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <div className="mb-8 md:mb-12 grid lg:grid-cols-2 gap-6 items-start">
-              <h2 className="text-4xl md:text-5xl font-bold text-white leading-tight" style={serifHeading}>
-                Explore our case studies
+              <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight" style={serifHeading}>
+                Programs & Initiatives
               </h2>
               <p className="text-base max-w-xl lg:justify-self-end leading-8" style={{ color: 'rgba(255,255,255,0.66)' }}>
-                Real implementations showing how AI and robotics initiatives were translated into practical student and
-                school outcomes.
+                Real programs driving measurable impact in schools and communities across Kenya.
               </p>
             </div>
           </FadeIn>
 
-          <div className="border-y" style={{ borderColor: 'rgba(255,255,255,0.15)' }}>
+          <div className="border-y" style={{ borderColor: 'rgba(255,255,255,0.12)' }}>
             {dynamicCaseStudies.map((study, index) => (
               <FadeIn key={study.id} delay={index * 0.05}>
                 <Link
                   to="/case-studies/$caseStudyId"
                   params={{ caseStudyId: study.id }}
                   className="grid md:grid-cols-[86px_1fr_auto] gap-4 items-center py-8 no-underline border-b last:border-b-0"
-                  style={{ borderColor: 'rgba(255,255,255,0.15)' }}
+                  style={{ borderColor: 'rgba(255,255,255,0.12)' }}
                 >
-                  <span className="text-5xl font-bold" style={{ color: 'rgba(255,255,255,0.45)', ...serifHeading }}>
+                  <span className="text-4xl font-bold" style={{ color: 'rgba(255,255,255,0.4)', ...serifHeading }}>
                     0{index + 1}
                   </span>
                   <div>
-                    <h3 className="text-5xl md:text-7xl leading-none font-black" style={{ color: 'rgba(255,255,255,0.35)' }}>
+                    <h3 className="text-3xl md:text-5xl leading-none font-bold" style={{ color: 'rgba(255,255,255,0.35)' }}>
                       {study.title}
                     </h3>
-                    <p className="text-sm mt-2" style={{ color: 'rgba(255,255,255,0.68)' }}>
+                    <p className="text-sm mt-2" style={{ color: 'rgba(255,255,255,0.6)' }}>
                       {study.category}
                     </p>
                   </div>
-                  <span className="text-white/80 text-sm font-semibold inline-flex items-center gap-2">
-                    Open <ArrowRight size={14} />
+                  <span className="text-white/70 text-sm font-semibold inline-flex items-center gap-2">
+                    Details <ArrowRight size={14} />
                   </span>
                 </Link>
               </FadeIn>
@@ -226,29 +222,29 @@ function AboutPage() {
               <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
                 Frequently asked questions
               </p>
-              <h2 className="text-4xl md:text-6xl font-bold leading-[1.08] mb-8" style={serifHeading}>
-                Everything schools and teams ask before joining.
+              <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-8" style={serifHeading}>
+                Questions from schools and partners.
               </h2>
             </FadeIn>
 
-            <div className="border-t" style={{ borderColor: '#d9d6d1' }}>
+            <div className="border-t" style={{ borderColor: 'var(--border-color)' }}>
               {dynamicFaqs.map((faq, index) => {
                 const isOpen = openFaq === index
 
                 return (
-                  <div key={faq.question} className="border-b" style={{ borderColor: '#d9d6d1' }}>
+                  <div key={faq.question} className="border-b" style={{ borderColor: 'var(--border-color)' }}>
                     <button
                       onClick={() => setOpenFaq(isOpen ? -1 : index)}
                       className="w-full flex items-center justify-between gap-6 text-left py-6"
                       style={{ background: 'transparent', border: 'none', cursor: 'pointer' }}
                     >
-                      <span className="text-lg font-semibold" style={{ color: '#1a1a1a' }}>
+                      <span className="text-base font-semibold" style={{ color: 'var(--text-primary)' }}>
                         {faq.question}
                       </span>
                       {isOpen ? <Minus size={16} /> : <Plus size={16} />}
                     </button>
                     {isOpen && (
-                      <p className="text-base leading-8 pb-6" style={{ color: '#2f3a46' }}>
+                      <p className="text-base leading-8 pb-6" style={{ color: 'var(--text-secondary)' }}>
                         {faq.answer}
                       </p>
                     )}
@@ -259,26 +255,26 @@ function AboutPage() {
           </div>
 
           <FadeIn delay={0.1}>
-            <div className="relative min-h-[560px] overflow-hidden" style={{ border: '1px solid #d9d6d1' }}>
+            <div className="relative min-h-[560px] overflow-hidden rounded-xl" style={{ border: '1px solid var(--border-color)' }}>
               <img
                 src="/students-robotics-royaltyfree.jpg"
-                alt="Robotics workshop participants"
+                alt="Students in robotics program"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.78))' }} />
               <div className="absolute left-6 right-6 bottom-6">
-                <p className="text-xs uppercase tracking-[0.24em] mb-3" style={{ color: 'rgba(255,255,255,0.75)' }}>
-                  Need direct support?
+                <p className="text-xs uppercase tracking-widest mb-3" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  Ready to get started?
                 </p>
-                <h3 className="text-3xl font-bold text-white mb-4" style={serifHeading}>
-                  Connect with the program team to plan your next season.
+                <h3 className="text-2xl font-bold text-white mb-4" style={serifHeading}>
+                  Connect with the Federation to bring STEM to your school or community.
                 </h3>
                 <Link
                   to="/register"
-                  className="inline-flex items-center gap-2 px-6 py-3 text-xs font-bold tracking-[0.2em] uppercase no-underline text-white"
+                  className="inline-flex items-center gap-2 px-6 py-3 text-sm font-semibold no-underline text-white rounded-lg"
                   style={{ background: 'var(--accent)' }}
                 >
-                  Start Registration <ArrowRight size={14} />
+                  Get Involved <ArrowRight size={14} />
                 </Link>
               </div>
             </div>

@@ -23,14 +23,13 @@ function ChallengesPage() {
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
-              Home - Challenges
+              Home - Programs
             </p>
-            <h1 className="text-5xl md:text-7xl max-w-4xl font-bold leading-[1.04]" style={serifHeading}>
-              Challenges and themes built for progression, not guesswork.
+            <h1 className="text-4xl md:text-6xl max-w-4xl font-bold leading-tight" style={serifHeading}>
+              Federation programs designed for structured STEM progression.
             </h1>
-            <p className="mt-6 text-base leading-8 max-w-2xl" style={{ color: '#2f3a46' }}>
-              Every track uses clear missions, transparent rubrics, and age-appropriate complexity so students can
-              build confidence while advancing technical depth season after season.
+            <p className="mt-6 text-base leading-8 max-w-2xl" style={{ color: 'var(--text-secondary)' }}>
+              The Robotics Federation of Kenya oversees three program tracks aligned to the CBC framework. Each track uses clear objectives, transparent rubrics, and age-appropriate challenges so students build skills progressively.
             </p>
           </FadeIn>
         </div>
@@ -40,10 +39,10 @@ function ChallengesPage() {
         <div className="max-w-6xl mx-auto">
           <FadeIn>
             <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
-              Season track architecture
+              Program architecture
             </p>
-            <h2 className="text-4xl md:text-6xl max-w-3xl mb-12 font-bold leading-[1.08]" style={serifHeading}>
-              The challenge structure, cut across all levels.
+            <h2 className="text-3xl md:text-5xl max-w-3xl mb-12 font-bold leading-tight" style={serifHeading}>
+              The program tracks, aligned to Kenya's curriculum levels.
             </h2>
           </FadeIn>
 
@@ -52,7 +51,7 @@ function ChallengesPage() {
               <FadeIn key={track.id} delay={index * 0.06}>
                 <article className="py-10 border-b" style={{ borderColor: '#d9d6d1' }}>
                   <div className="grid lg:grid-cols-[88px_1.1fr_1fr] gap-6 lg:gap-10 mb-8">
-                    <p className="text-6xl leading-none font-bold text-[rgba(194,75,59,0.72)]" style={serifHeading}>
+                    <p className="text-5xl leading-none font-bold" style={{ color: 'var(--accent)', opacity: 0.5, ...serifHeading }}>
                       {index + 1}
                     </p>
                     <div>
@@ -63,7 +62,7 @@ function ChallengesPage() {
                         {track.ageRange} - {track.tagline}
                       </p>
                     </div>
-                    <p className="text-base leading-8 pl-4" style={{ color: '#2f3a46', borderLeft: '2px solid rgba(194,75,59,0.45)' }}>
+                    <p className="text-base leading-8 pl-4" style={{ color: 'var(--text-secondary)', borderLeft: '2px solid var(--accent)' }}>
                       {track.description}
                     </p>
                   </div>
@@ -124,14 +123,13 @@ function ChallengesPage() {
         <div className="max-w-6xl mx-auto grid lg:grid-cols-[1.05fr_1fr] gap-10 items-center">
           <FadeIn>
             <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
-              Season 2 theme
+              2025-2026 Theme
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold leading-[1.08] mb-6" style={serifHeading}>
-              Building Tomorrow
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6" style={serifHeading}>
+              Building a Sustainable Kenya
             </h2>
-            <p className="text-base leading-8" style={{ color: '#2f3a46' }}>
-              Teams are challenged to design robotics solutions that address sustainability goals, from smart
-              agriculture and mobility to efficient energy and resource systems in local communities.
+            <p className="text-base leading-8" style={{ color: 'var(--text-secondary)' }}>
+              This season, Federation programs challenge students to design robotics solutions that address sustainability goals — from smart agriculture and water management to efficient energy systems and waste reduction in local communities.
             </p>
           </FadeIn>
 

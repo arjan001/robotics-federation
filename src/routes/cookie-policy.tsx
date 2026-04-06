@@ -25,7 +25,7 @@ function CookiePolicyPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>1. What Are Cookies</h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work efficiently and to provide information to website operators. This Cookie Policy explains how the Inspire Robotics Challenge website, operated by Stemtrix EA, uses cookies and similar technologies.
+                  Cookies are small text files that are placed on your device when you visit a website. They are widely used to make websites work efficiently and to provide information to website operators. This Cookie Policy explains how the Robotics Federation of Kenya website uses cookies and similar technologies.
                 </p>
               </div>
 
@@ -91,7 +91,7 @@ function CookiePolicyPage() {
                   If you have questions about our use of cookies, contact us:
                 </p>
                 <div className="mt-3 p-4 rounded-lg text-sm" style={{ background: 'var(--bg-secondary)', color: 'var(--text-secondary)' }}>
-                  <p><strong>Stemtrix EA</strong></p>
+                  <p><strong>Robotics Federation of Kenya</strong></p>
                   <p>Kabarnet Road off Ngong Road, J2 Jamhuri Cres, Nairobi, Kenya</p>
                   <p>Phone: +254 728 128 353 / +254 110 394 940</p>
                   <p>Email: info@stemtrixea.org</p>

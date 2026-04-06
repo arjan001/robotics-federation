@@ -44,7 +44,7 @@ function CaseStudyPage() {
         className="px-4 py-24"
         style={{
           background:
-            'radial-gradient(circle at 12% 8%, rgba(194,75,59,0.2), transparent 42%), radial-gradient(circle at 95% 88%, rgba(194,75,59,0.14), transparent 38%), linear-gradient(145deg, #121421 0%, #16192b 52%, #131b35 100%)',
+            'radial-gradient(circle at 12% 8%, rgba(29,78,216,0.2), transparent 42%), radial-gradient(circle at 95% 88%, rgba(29,78,216,0.14), transparent 38%), linear-gradient(145deg, #0f172a 0%, #1e293b 52%, #0f172a 100%)',
         }}
       >
         <div className="max-w-5xl mx-auto">

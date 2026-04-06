@@ -43,18 +43,16 @@ function EventsPage() {
               Events & Milestones
             </p>
             <h1
-              className="text-5xl md:text-7xl max-w-4xl font-bold leading-[1.04] mb-8"
+              className="text-4xl md:text-6xl max-w-4xl font-bold leading-tight mb-8"
               style={serifHeading}
             >
-              Every season tells a story of growth and ambition.
+              Federation events that drive growth and collaboration.
             </h1>
             <p
               className="text-base leading-8 max-w-2xl mb-12"
-              style={{ color: '#2f3a46' }}
+              style={{ color: 'var(--text-secondary)' }}
             >
-              From kickoff and qualifiers to championship finals, each event is
-              structured to build technical depth, collaboration quality, and
-              visible growth for teams and schools.
+              From national summits and teacher training to sanctioned competitions and regional expansion programs, every Federation event is designed to strengthen Kenya's STEM ecosystem.
             </p>
           </FadeIn>
 
@@ -389,18 +387,18 @@ function EventsPage() {
       {/* CTA Section - dark, inspired by reference "Let's Work Together" */}
       <section
         className="px-4 py-24 md:py-32"
-        style={{ background: '#1a1a1a' }}
+        style={{ background: 'var(--bg-dark)' }}
       >
         <div className="max-w-3xl mx-auto text-center">
           <FadeIn>
             <h2
-              className="text-4xl md:text-6xl font-bold text-white leading-[1.08] mb-6"
-              style={{ ...serifHeading, fontStyle: 'italic' }}
+              className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6"
+              style={serifHeading}
             >
-              Build, Compete, and Be Part of the Next Chapter.
+              Be Part of Kenya's STEM Movement.
             </h2>
             <p className="text-base leading-8 mb-10 max-w-xl mx-auto" style={{ color: 'rgba(255,255,255,0.6)' }}>
-              Whether you're a team ready to compete or a partner looking to support the next generation of innovators, we're ready to connect.
+              Whether you're a school ready to join, a team ready to compete, or a partner looking to support the next generation of innovators — we're ready to connect.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a

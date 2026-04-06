@@ -120,9 +120,9 @@ export function AdminSidebar() {
   const sidebarContent = (
     <>
       <div className="admin-sidebar-brand">
-        <img src="/inspire-robotics-logo.jpeg" alt="Logo" className="admin-sidebar-logo" />
+        <div style={{ width: 32, height: 32, borderRadius: 8, background: 'var(--accent, #1d4ed8)', color: '#fff', display: 'flex', alignItems: 'center', justifyContent: 'center', fontWeight: 700, fontSize: 12 }}>RFK</div>
         <div>
-          <div className="admin-sidebar-title">Inspire Robotics</div>
+          <div className="admin-sidebar-title">Robotics Federation</div>
           <div className="admin-sidebar-subtitle">Admin Panel</div>
         </div>
       </div>

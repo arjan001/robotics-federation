@@ -25,7 +25,7 @@ function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>1. Acceptance of Terms</h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  By accessing and using the Inspire Robotics Challenge website and services operated by Stemtrix EA, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our website or services. Stemtrix EA is registered and operates in Nairobi, Kenya at Kabarnet Road off Ngong Road, J2 Jamhuri Cres.
+                  By accessing and using the Robotics Federation of Kenya website and services, you agree to be bound by these Terms of Use. If you do not agree to these terms, please do not use our website or services. The Robotics Federation of Kenya is registered and operates in Nairobi, Kenya.
                 </p>
               </div>
 
@@ -35,7 +35,7 @@ function TermsPage() {
                   <li>Participants must register through an affiliated school or as an independent team through the official registration process.</li>
                   <li>Participants aged under 18 must have parental or guardian consent, typically facilitated through the registering school.</li>
                   <li>Teams must adhere to the competition rules, guidelines, and code of conduct as published for each season.</li>
-                  <li>Stemtrix EA reserves the right to disqualify teams that violate competition rules or exhibit unsportsmanlike behavior.</li>
+                  <li>The Robotics Federation of Kenya reserves the right to disqualify teams that violate competition rules or exhibit unsportsmanlike behavior.</li>
                   <li>Competition schedules, venues, and formats are subject to change at the discretion of the organizing committee.</li>
                 </ul>
               </div>
@@ -43,7 +43,7 @@ function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>3. Intellectual Property</h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  All content on this website, including text, graphics, logos, images, and software, is the property of Stemtrix EA or its content suppliers and is protected by Kenyan and international copyright laws. The Inspire Robotics Challenge name, logo, and branding are trademarks of Stemtrix EA. Participating teams retain ownership of their robot designs and code, but grant Stemtrix EA a non-exclusive license to use photos, videos, and descriptions of their work for promotional and educational purposes.
+                  All content on this website, including text, graphics, logos, images, and software, is the property of the Robotics Federation of Kenya or its content suppliers and is protected by Kenyan and international copyright laws. The Robotics Federation of Kenya name, logo, and branding are trademarks of the Federation. Participating teams retain ownership of their robot designs and code, but grant the Federation a non-exclusive license to use photos, videos, and descriptions of their work for promotional and educational purposes.
                 </p>
               </div>
 
@@ -60,21 +60,21 @@ function TermsPage() {
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>5. Registration and Fees</h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Competition registration fees, where applicable, are published on the registration page for each season. Fees are non-refundable unless a season or event is cancelled by Stemtrix EA. Scholarship and fee waiver programs may be available for qualifying teams from underserved communities.
+                  Competition registration fees, where applicable, are published on the registration page for each season. Fees are non-refundable unless a season or event is cancelled by the Robotics Federation of Kenya. Scholarship and fee waiver programs may be available for qualifying teams from underserved communities.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>6. Liability</h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  Stemtrix EA takes reasonable measures to ensure the safety of participants during competition events. However, participation in robotics competitions involves inherent risks. Stemtrix EA shall not be liable for any injuries, damages, or losses arising from participation in competition activities, except where caused by gross negligence. Participating schools and guardians acknowledge these risks upon registration.
+                  The Robotics Federation of Kenya takes reasonable measures to ensure the safety of participants during events. However, participation in robotics competitions involves inherent risks. The Federation shall not be liable for any injuries, damages, or losses arising from participation in competition activities, except where caused by gross negligence. Participating schools and guardians acknowledge these risks upon registration.
                 </p>
               </div>
 
               <div>
                 <h2 className="text-2xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>7. Media and Photography</h2>
                 <p className="text-sm leading-relaxed" style={{ color: 'var(--text-secondary)' }}>
-                  By participating in Inspire Robotics Challenge events, participants and their guardians consent to being photographed and filmed. These materials may be used on our website, social media, and promotional materials. If you wish to opt out of media coverage, please notify us in writing before the event.
+                  By participating in Federation-sanctioned events, participants and their guardians consent to being photographed and filmed. These materials may be used on our website, social media, and promotional materials. If you wish to opt out of media coverage, please notify us in writing before the event.
                 </p>
               </div>
 
@@ -91,7 +91,7 @@ function TermsPage() {
                   For questions about these terms, contact us:
                 </p>
                 <div className="mt-3 p-4 rounded-lg text-sm" style={{ background: 'var(--bg-secondary)', color: 'var(--text-secondary)' }}>
-                  <p><strong>Stemtrix EA</strong></p>
+                  <p><strong>Robotics Federation of Kenya</strong></p>
                   <p>Kabarnet Road off Ngong Road, J2 Jamhuri Cres, Nairobi, Kenya</p>
                   <p>Phone: +254 728 128 353 / +254 110 394 940</p>
                   <p>Email: info@stemtrixea.org</p>

@@ -91,7 +91,7 @@ function AdminRegisterPage() {
       <div className="w-full max-w-[460px]">
         <div className="text-center mb-8">
           <div className="w-14 h-14 rounded-2xl flex items-center justify-center mx-auto mb-4 text-2xl text-white"
-            style={{ background: 'var(--accent, #c24b3b)' }}>
+            style={{ background: 'var(--accent, #1d4ed8)' }}>
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
               <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
               <circle cx="9" cy="7" r="4" />
@@ -103,7 +103,7 @@ function AdminRegisterPage() {
             Create your account
           </h1>
           <p className="text-sm mt-2" style={{ color: '#555' }}>
-            Register as an admin for Inspire Robotics
+            Register as an admin for the Robotics Federation
           </p>
         </div>
 
@@ -144,7 +144,7 @@ function AdminRegisterPage() {
                 placeholder="Enter your full name"
                 className={inputClass}
                 style={inputStyle}
-                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #c24b3b)' }}
+                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #1d4ed8)' }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = '#e5e5e5' }}
               />
             </div>
@@ -160,7 +160,7 @@ function AdminRegisterPage() {
                 placeholder="admin@example.com"
                 className={inputClass}
                 style={inputStyle}
-                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #c24b3b)' }}
+                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #1d4ed8)' }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = '#e5e5e5' }}
               />
             </div>
@@ -176,7 +176,7 @@ function AdminRegisterPage() {
                 placeholder="Min 6 characters"
                 className={inputClass}
                 style={inputStyle}
-                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #c24b3b)' }}
+                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #1d4ed8)' }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = '#e5e5e5' }}
               />
             </div>
@@ -192,7 +192,7 @@ function AdminRegisterPage() {
                 placeholder="Re-enter your password"
                 className={inputClass}
                 style={inputStyle}
-                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #c24b3b)' }}
+                onFocus={(e) => { e.currentTarget.style.borderColor = 'var(--accent, #1d4ed8)' }}
                 onBlur={(e) => { e.currentTarget.style.borderColor = '#e5e5e5' }}
               />
             </div>
@@ -202,12 +202,12 @@ function AdminRegisterPage() {
               disabled={loading}
               className="w-full py-3.5 rounded-lg text-white text-sm font-semibold transition-all"
               style={{
-                background: loading ? '#888' : 'var(--accent, #c24b3b)',
+                background: loading ? '#888' : 'var(--accent, #1d4ed8)',
                 cursor: loading ? 'not-allowed' : 'pointer',
                 opacity: loading ? 0.7 : 1,
               }}
               onMouseEnter={(e) => { if (!loading) e.currentTarget.style.background = 'var(--accent-hover, #a33830)' }}
-              onMouseLeave={(e) => { if (!loading) e.currentTarget.style.background = 'var(--accent, #c24b3b)' }}
+              onMouseLeave={(e) => { if (!loading) e.currentTarget.style.background = 'var(--accent, #1d4ed8)' }}
             >
               {loading ? 'Creating Account...' : 'Create Admin Account'}
             </button>
@@ -217,7 +217,7 @@ function AdminRegisterPage() {
         <div className="text-center mt-6">
           <p className="text-sm" style={{ color: '#555' }}>
             Already have an account?{' '}
-            <a href="/admin-login" className="font-semibold transition-colors" style={{ color: 'var(--accent, #c24b3b)', textDecoration: 'none' }}>
+            <a href="/admin-login" className="font-semibold transition-colors" style={{ color: 'var(--accent, #1d4ed8)', textDecoration: 'none' }}>
               Sign in
             </a>
           </p>

@@ -11,20 +11,20 @@ const SEED_DATA: Record<string, unknown[]> = {
   home: [
     {
       id: 'home-main',
-      heroTitle: 'Inspire Robotics Challenge',
-      heroSubtitle: "East Africa's premier robotics and AI competition hub. Empowering young minds to build, innovate, and shape the future through technology.",
-      primaryCtaLabel: 'Register Your Team',
-      primaryCtaHref: '/register',
-      secondaryCtaLabel: 'Explore Challenges',
-      secondaryCtaHref: '/challenges',
+      heroTitle: 'Robotics Federation of Kenya',
+      heroSubtitle: 'Uniting schools, organizations, and industry partners to build a robust STEM and robotics ecosystem that prepares every Kenyan learner for the future.',
+      primaryCtaLabel: 'Learn About Our Mission',
+      primaryCtaHref: '/about',
+      secondaryCtaLabel: 'Get Involved',
+      secondaryCtaHref: '/register',
     },
   ],
 
   'about-content': [
     {
       id: 'about-main',
-      title: 'Built for future innovators. Designed for measurable impact.',
-      subtitle: 'Stemtrix EA runs a competition-first learning ecosystem where students build real robotics skills, mentors shape team growth, and schools gain a structured path to future-ready STEM outcomes.',
+      title: 'The national body advancing robotics and STEM for every Kenyan learner.',
+      subtitle: 'The Robotics Federation of Kenya coordinates, standardizes, and grows the national ecosystem for robotics and STEM education — connecting government, schools, industry, and competition organizers under one unified framework.',
     },
   ],
 
@@ -49,21 +49,21 @@ const SEED_DATA: Record<string, unknown[]> = {
   register: [
     {
       id: 'register-main',
-      title: 'Registration Hub',
-      subtitle: 'Register your team for the competition or express interest as a partner.',
-      teamTitle: 'Team Registration',
-      teamDescription: 'Register your school team for the next season of the Inspire Robotics Challenge.',
+      title: 'Get Involved',
+      subtitle: 'Register your school with the Federation or express interest as a partner organization.',
+      teamTitle: 'School Registration',
+      teamDescription: 'Register your school to join the Robotics Federation of Kenya.',
       partnerTitle: 'Partner Interest',
-      partnerDescription: 'Interested in sponsoring or partnering with the Inspire Robotics Challenge?',
+      partnerDescription: 'Interested in partnering with the Robotics Federation of Kenya?',
     },
   ],
 
   footer: [
     {
       id: 'footer-main',
-      tagline: 'Inspiring the next generation of African innovators through robotics and AI.',
-      copyright: '© 2026 Inspire Robotics Challenge by Stemtrix EA. All rights reserved.',
-      email: 'stemtrix@gmail.com',
+      tagline: 'Advancing robotics and STEM education for every Kenyan learner.',
+      copyright: '© 2026 Robotics Federation of Kenya. All rights reserved.',
+      email: 'info@roboticsfederationkenya.org',
     },
   ],
 
@@ -149,10 +149,10 @@ const SEED_DATA: Record<string, unknown[]> = {
   settings: [
     {
       id: 'site',
-      siteName: 'Inspire Robotics Challenge',
-      organizationName: 'Stemtrix EA',
-      siteTagline: "East Africa's Premier Robotics & AI Competition",
-      contactEmail: 'hello@inspirerobotics.org',
+      siteName: 'Robotics Federation of Kenya',
+      organizationName: 'Robotics Federation of Kenya',
+      siteTagline: 'The National Governing Body for Robotics & STEM Education',
+      contactEmail: 'info@roboticsfederationkenya.org',
     },
   ],
 }

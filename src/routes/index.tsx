@@ -1,9 +1,6 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
 import { FadeIn } from '@/components/FadeIn'
-import { competitionTracks, type CompetitionTrack } from '@/data/competition'
-import { events, type EventData } from '@/data/events'
-import { useContentModule } from '@/lib/use-content-module'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Target, Eye, Lightbulb, GraduationCap, Users, Globe, Award, BookOpen, Cpu, School, Handshake } from 'lucide-react'
 import type { CSSProperties } from 'react'
 
 export const Route = createFileRoute('/')({
@@ -16,58 +13,38 @@ const serifHeading: CSSProperties = {
 }
 
 function HomePage() {
-  const { items: dynamicHomeItems } = useContentModule<{
-    id: string
-    heroTitle: string
-    heroSubtitle: string
-    primaryCtaLabel: string
-    primaryCtaHref: string
-    secondaryCtaLabel: string
-    secondaryCtaHref: string
-  }>('home', [
-    {
-      id: 'home-main',
-      heroTitle: 'Inspire Robotics Challenge',
-      heroSubtitle:
-        "East Africa's premier robotics and AI competition hub. Empowering young minds to build, innovate, and shape the future through technology.",
-      primaryCtaLabel: 'Register Your Team',
-      primaryCtaHref: '/register',
-      secondaryCtaLabel: 'Explore Challenges',
-      secondaryCtaHref: '/challenges',
-    },
-  ])
-  const { items: dynamicEvents } = useContentModule<EventData>('events', events)
-  const { items: dynamicTracks } = useContentModule<CompetitionTrack>('challenges', competitionTracks)
-  const homeCopy = dynamicHomeItems[0]
-  const upcomingEvents = dynamicEvents.filter((event) => event.status !== 'past').slice(0, 3)
-
   return (
     <div>
-      {/* Hero section intentionally preserved */}
+      {/* Hero section */}
       <section className="section-full hero-parallax px-4 relative">
-        <div className="absolute inset-0 bg-black/45" />
+        <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-4xl mx-auto w-full py-20 text-center relative z-10">
           <FadeIn delay={0.1}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold mb-6 leading-tight text-white">
-              {homeCopy?.heroTitle}
-            </h1>
-          </FadeIn>
-          <FadeIn delay={0.2}>
-            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-white/90">
-              {homeCopy?.heroSubtitle}
+            <p className="text-sm md:text-base font-medium tracking-widest uppercase mb-6 text-white/70">
+              The National Governing Body for Robotics & STEM Education
             </p>
           </FadeIn>
+          <FadeIn delay={0.2}>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
+              Robotics Federation of Kenya
+            </h1>
+          </FadeIn>
           <FadeIn delay={0.3}>
+            <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-white/90">
+              Uniting schools, organizations, and industry partners to build a robust STEM and robotics ecosystem that prepares every Kenyan learner for the future.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.4}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a
-                href={homeCopy?.primaryCtaHref || '/register'}
+              <Link
+                to="/about"
                 className="px-8 py-3.5 rounded-lg font-semibold text-white no-underline text-sm flex items-center gap-2"
                 style={{ background: 'var(--accent)' }}
               >
-                {homeCopy?.primaryCtaLabel || 'Register Your Team'} <ArrowRight size={16} />
-              </a>
-              <a
-                href={homeCopy?.secondaryCtaHref || '/challenges'}
+                Learn About Our Mission <ArrowRight size={16} />
+              </Link>
+              <Link
+                to="/register"
                 className="px-8 py-3.5 rounded-lg font-semibold no-underline text-sm border flex items-center gap-2"
                 style={{
                   borderColor: 'rgba(255, 255, 255, 0.7)',
@@ -75,136 +52,114 @@ function HomePage() {
                   background: 'rgba(255, 255, 255, 0.12)',
                 }}
               >
-                {homeCopy?.secondaryCtaLabel || 'Explore Challenges'} <ArrowRight size={14} />
-              </a>
+                Get Involved <ArrowRight size={14} />
+              </Link>
             </div>
           </FadeIn>
         </div>
       </section>
 
+      {/* Mission, Vision, Values */}
       <section className="px-4 py-20" style={{ background: 'var(--bg-secondary)' }}>
         <div className="max-w-6xl mx-auto">
-          <div className="grid lg:grid-cols-2 gap-10 items-stretch">
-            <FadeIn>
-              <div className="h-full flex flex-col justify-center pr-0 lg:pr-8">
-                <p className="text-sm mb-5" style={{ color: 'var(--accent)' }}>
-                  Bringing integrity and consciousness to robotics learning.
-                </p>
-                <h2 className="text-4xl md:text-6xl font-bold leading-[1.08] mb-8" style={serifHeading}>
-                  Crafted for young makers.
-                  <br />
-                  Cut to precision.
-                </h2>
-                <p className="text-base leading-8 mb-5" style={{ color: '#2f3a46' }}>
-                  Stemtrix builds robotics pathways that balance discipline and creativity. Each team receives
-                  guided mentorship, practical engineering experience, and a competitive arena designed for real growth.
-                </p>
-                <p className="text-base leading-8 pl-4" style={{ color: '#2f3a46', borderLeft: '2px solid rgba(194,75,59,0.35)' }}>
-                  The result is confidence, technical fluency, and students ready to solve actual community problems.
-                </p>
-                <div className="mt-9">
-                  <Link
-                    to="/about"
-                    className="inline-flex items-center gap-2 px-7 py-3 text-xs font-bold tracking-[0.2em] uppercase no-underline text-white"
-                    style={{ background: 'var(--accent)' }}
-                  >
-                    Discover More <ArrowRight size={14} />
-                  </Link>
-                </div>
-              </div>
-            </FadeIn>
+          <FadeIn>
+            <p className="text-sm mb-4 font-medium" style={{ color: 'var(--accent)' }}>
+              Who We Are
+            </p>
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-6 max-w-3xl" style={serifHeading}>
+              Shaping Kenya's future through robotics and STEM education.
+            </h2>
+            <p className="text-base leading-8 max-w-2xl mb-12" style={{ color: 'var(--text-secondary)' }}>
+              The Robotics Federation of Kenya (RFK) serves as the central coordinating body for all robotics and STEM-related activities across the nation. We work with government agencies, educational institutions, and private sector partners to integrate robotics and STEM into Kenya's education system from primary through secondary school.
+            </p>
+          </FadeIn>
 
-            <FadeIn delay={0.1}>
-              <div className="relative h-full min-h-[620px] overflow-hidden" style={{ border: '1px solid #d9d6d1' }}>
-                <img
-                  src="/students-robotics-royaltyfree.jpg"
-                  alt="Students building robots"
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
-                <div className="absolute inset-0" style={{ background: 'linear-gradient(100deg, rgba(21,24,29,0.82), rgba(21,24,29,0.44) 60%, rgba(21,24,29,0.16))' }} />
-                <div className="absolute inset-0 grid grid-cols-2 divide-x divide-y" style={{ borderColor: 'rgba(255,255,255,0.25)' }}>
-                  {[
-                    {
-                      step: '1.',
-                      title: 'Consultation & Discovery',
-                      text: 'Mentors align track level, team strengths, and season outcomes before kickoff.',
-                    },
-                    {
-                      step: '2.',
-                      title: 'Build & Programming',
-                      text: 'Teams move from concepts to tested robots with structured weekly milestones.',
-                    },
-                    {
-                      step: '3.',
-                      title: 'Testing & Iteration',
-                      text: 'Practice rounds sharpen reliability, strategy, and technical decision-making.',
-                    },
-                    {
-                      step: '4.',
-                      title: 'Showcase & Delivery',
-                      text: 'Students present complete solutions at regional events and championship finals.',
-                    },
-                  ].map((item) => (
-                    <div key={item.step} className="p-6 md:p-8 flex flex-col justify-end">
-                      <p className="text-5xl font-bold mb-3 text-white/80" style={serifHeading}>
-                        {item.step}
-                      </p>
-                      <h3 className="text-2xl font-bold mb-2 text-white" style={serifHeading}>
-                        {item.title}
-                      </h3>
-                      <p className="text-sm leading-7 text-white/80">{item.text}</p>
-                    </div>
-                  ))}
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              {
+                icon: <Target size={28} />,
+                title: 'Our Mission',
+                text: 'To advance robotics and STEM education across Kenya by coordinating national programs, supporting curriculum integration, fostering competitions, and building partnerships that ensure every learner has access to future-ready skills.',
+              },
+              {
+                icon: <Eye size={28} />,
+                title: 'Our Vision',
+                text: 'A Kenya where every young person, regardless of background or location, has the opportunity to develop critical thinking, problem-solving, and technical skills through hands-on robotics and STEM education.',
+              },
+              {
+                icon: <Lightbulb size={28} />,
+                title: 'Our Values',
+                text: 'Inclusivity in access to STEM education. Excellence in program delivery. Collaboration across sectors. Innovation as a driver of national development. Integrity in governance and partnerships.',
+              },
+            ].map((item, index) => (
+              <FadeIn key={item.title} delay={index * 0.1}>
+                <div
+                  className="p-8 rounded-xl border h-full"
+                  style={{ borderColor: 'var(--border-color)', background: 'var(--bg-card)' }}
+                >
+                  <div className="w-14 h-14 rounded-xl flex items-center justify-center mb-5" style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
+                    {item.icon}
+                  </div>
+                  <h3 className="text-xl font-bold mb-3" style={serifHeading}>
+                    {item.title}
+                  </h3>
+                  <p className="text-sm leading-7" style={{ color: 'var(--text-secondary)' }}>
+                    {item.text}
+                  </p>
                 </div>
-              </div>
-            </FadeIn>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="px-4 py-20" style={{ background: 'var(--bg-secondary)' }}>
+      {/* What We Do - Federation Roles */}
+      <section className="px-4 py-20" style={{ background: 'var(--bg-primary)' }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
-              Our process is designed to make every student feel equipped and involved.
+            <p className="text-sm mb-4 font-medium" style={{ color: 'var(--accent)' }}>
+              What We Do
             </p>
-            <h2 className="text-4xl md:text-6xl max-w-3xl mb-12 font-bold leading-[1.08]" style={serifHeading}>
-              A robotics experience built around your team.
+            <h2 className="text-3xl md:text-5xl font-bold max-w-3xl leading-tight mb-4" style={serifHeading}>
+              The Federation's role in Kenya's STEM transformation.
             </h2>
+            <p className="text-base leading-8 max-w-2xl mb-12" style={{ color: 'var(--text-secondary)' }}>
+              As the national governing body, RFK plays a unique and critical role in ensuring robotics and STEM education is coordinated, standardized, and accessible nationwide.
+            </p>
           </FadeIn>
 
-          <div className="border-t" style={{ borderColor: '#d9d6d1' }}>
+          <div className="border-t" style={{ borderColor: 'var(--border-color)' }}>
             {[
               {
                 number: '1',
-                title: 'Season Onboarding & Team Formation',
-                body: 'Schools and independent teams are onboarded, grouped into tracks, and introduced to mentors. Expectations, season timeline, and challenge briefs are clarified from day one.',
+                title: 'Curriculum Integration & Standards',
+                body: 'Working with the Kenya Institute of Curriculum Development (KICD) and the Ministry of Education to integrate robotics and STEM modules into the Competency-Based Curriculum (CBC), ensuring alignment from primary to secondary education.',
               },
               {
                 number: '2',
-                title: 'Precise Build Planning & Pattern Work',
-                body: 'Students break the challenge into engineering modules, assign roles, and draft technical approaches. This step aligns design, code, and field strategy before heavy prototyping begins.',
+                title: 'National Competition Coordination',
+                body: 'Sanctioning and overseeing national robotics competitions including the Inspire Robotics Challenge, regional STEM olympiads, and inter-school coding tournaments. We ensure fair standards, qualified judges, and equitable participation.',
               },
               {
                 number: '3',
-                title: 'Field Testing & Adjustments',
-                body: 'Teams run iterative testing cycles and improve robot stability, timing, and scoring efficiency. Mentors focus on measurable gains and resilience under match pressure.',
+                title: 'School Onboarding & Support',
+                body: 'Facilitating the introduction of STEM and robotics programs in schools through partner organizations like Inspire Robotics Challenge and Stemtrix East Africa. We provide frameworks for equipment procurement, teacher training, and club formation.',
               },
               {
                 number: '4',
-                title: 'Final Review & Competition Delivery',
-                body: 'Before events, each team receives final readiness checks across mechanics, software, and presentation. Competition day execution then reflects months of focused preparation.',
+                title: 'Partnership & Resource Mobilization',
+                body: 'Connecting schools with technology providers, corporate sponsors, NGOs, and international organizations to fund equipment, training, and competition participation. Building a sustainable ecosystem of support.',
               },
             ].map((item) => (
               <FadeIn key={item.number}>
-                <div className="py-10 md:py-12 border-b grid md:grid-cols-[90px_1.2fr_1fr] gap-6 md:gap-10" style={{ borderColor: '#d9d6d1' }}>
-                  <p className="text-6xl text-[rgba(194,75,59,0.7)] leading-none font-bold" style={serifHeading}>
+                <div className="py-10 md:py-12 border-b grid md:grid-cols-[90px_1.2fr_1fr] gap-6 md:gap-10" style={{ borderColor: 'var(--border-color)' }}>
+                  <p className="text-5xl font-bold leading-none" style={{ color: 'var(--accent)', opacity: 0.5, ...serifHeading }}>
                     {item.number}
                   </p>
-                  <h3 className="text-3xl font-bold leading-[1.2]" style={serifHeading}>
+                  <h3 className="text-2xl md:text-3xl font-bold leading-tight" style={serifHeading}>
                     {item.title}
                   </h3>
-                  <p className="text-base leading-8 pl-4" style={{ color: '#2f3a46', borderLeft: '2px solid rgba(194,75,59,0.45)' }}>
+                  <p className="text-base leading-8 pl-4" style={{ color: 'var(--text-secondary)', borderLeft: '2px solid var(--accent)' }}>
                     {item.body}
                   </p>
                 </div>
@@ -214,45 +169,88 @@ function HomePage() {
         </div>
       </section>
 
+      {/* Impact Stats */}
+      <section className="px-4 py-20" style={{ background: 'var(--bg-dark)' }}>
+        <div className="max-w-6xl mx-auto">
+          <FadeIn>
+            <div className="text-center mb-14">
+              <p className="text-sm mb-3 font-medium" style={{ color: 'var(--accent)' }}>
+                Our Impact
+              </p>
+              <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight" style={serifHeading}>
+                Building Kenya's STEM future, one school at a time.
+              </h2>
+            </div>
+          </FadeIn>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              { value: '200+', label: 'Schools Engaged', icon: <School size={24} /> },
+              { value: '50,000+', label: 'Students Reached', icon: <Users size={24} /> },
+              { value: '30+', label: 'Partner Organizations', icon: <Handshake size={24} /> },
+              { value: '15+', label: 'Counties Active', icon: <Globe size={24} /> },
+            ].map((stat, index) => (
+              <FadeIn key={stat.label} delay={index * 0.08}>
+                <div className="text-center p-6 rounded-xl" style={{ background: 'rgba(255,255,255,0.04)', border: '1px solid rgba(255,255,255,0.08)' }}>
+                  <div className="w-12 h-12 mx-auto mb-4 rounded-lg flex items-center justify-center" style={{ background: 'rgba(255,255,255,0.06)', color: 'var(--accent)' }}>
+                    {stat.icon}
+                  </div>
+                  <p className="text-3xl md:text-4xl font-bold text-white mb-1">{stat.value}</p>
+                  <p className="text-sm" style={{ color: 'rgba(255,255,255,0.6)' }}>{stat.label}</p>
+                </div>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Strategic Goals */}
       <section className="px-4 py-20" style={{ background: 'var(--bg-secondary)' }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <p className="text-sm mb-4" style={{ color: 'var(--accent)' }}>
-              Crafting excellence with masterful tools and unmatched skills.
+            <p className="text-sm mb-4 font-medium" style={{ color: 'var(--accent)' }}>
+              Strategic Goals 2025-2030
             </p>
-            <h2 className="text-4xl md:text-6xl font-bold max-w-3xl leading-[1.08]" style={serifHeading}>
-              Perfecting our craft with the finest tools and timeless skills.
+            <h2 className="text-3xl md:text-5xl font-bold max-w-3xl leading-tight" style={serifHeading}>
+              A five-year roadmap for nationwide STEM adoption.
             </h2>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 mt-12" style={{ borderTop: '1px solid #d9d6d1', borderLeft: '1px solid #d9d6d1' }}>
+          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
             {[
               {
-                title: 'Bespoke Team Coaching',
-                desc: 'Track-specific mentoring, curriculum support, and practical engineering guidance tailored to each team.',
+                icon: <GraduationCap size={24} />,
+                title: 'Universal Access',
+                desc: 'Ensure every county in Kenya has at least 5 schools running structured robotics and STEM programs by 2028.',
               },
               {
-                title: 'Robot Alterations & Repairs',
-                desc: 'Fast diagnostics, mechanical refinements, and software fixes that keep teams competition-ready.',
+                icon: <BookOpen size={24} />,
+                title: 'Curriculum Alignment',
+                desc: 'Complete integration of robotics modules into the CBC framework across all school levels by 2027.',
               },
               {
-                title: 'Mission Strategy Design',
-                desc: 'Scoring-path analysis, autonomous routine planning, and driver practice formats for stronger match results.',
+                icon: <Award size={24} />,
+                title: 'Competition Excellence',
+                desc: 'Grow national competitions to include 1,000+ teams and achieve representation in international robotics events.',
               },
               {
-                title: 'Restyling & Upskilling',
-                desc: 'Continuous workshops that help teams upgrade weak areas and preserve high-performing systems.',
+                icon: <Cpu size={24} />,
+                title: 'Teacher Capacity',
+                desc: 'Train 5,000+ teachers in robotics and STEM pedagogy to create sustainable in-school programs nationwide.',
               },
             ].map((item, index) => (
               <FadeIn key={item.title} delay={index * 0.08}>
-                <div className="p-8 h-full" style={{ borderRight: '1px solid #d9d6d1', borderBottom: '1px solid #d9d6d1' }}>
-                  <p className="text-xs uppercase tracking-[0.22em] mb-6" style={{ color: 'var(--accent)' }}>
-                    0{index + 1}
-                  </p>
-                  <h3 className="text-3xl mb-4 font-bold leading-tight" style={serifHeading}>
+                <div
+                  className="p-7 rounded-xl border h-full"
+                  style={{ borderColor: 'var(--border-color)', background: 'var(--bg-card)' }}
+                >
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
+                    {item.icon}
+                  </div>
+                  <h3 className="text-lg font-bold mb-3" style={serifHeading}>
                     {item.title}
                   </h3>
-                  <p className="text-sm leading-7" style={{ color: '#2f3a46' }}>
+                  <p className="text-sm leading-7" style={{ color: 'var(--text-secondary)' }}>
                     {item.desc}
                   </p>
                 </div>
@@ -262,107 +260,91 @@ function HomePage() {
         </div>
       </section>
 
-      <section
-        className="px-4 py-20"
-        style={{
-          background:
-            'radial-gradient(circle at 12% 8%, rgba(194,75,59,0.14), transparent 42%), radial-gradient(circle at 92% 92%, rgba(194,75,59,0.1), transparent 38%), linear-gradient(145deg, #121421 0%, #16192b 52%, #131b35 100%)',
-        }}
-      >
+      {/* Key Partners */}
+      <section className="px-4 py-20" style={{ background: 'var(--bg-primary)' }}>
         <div className="max-w-6xl mx-auto">
           <FadeIn>
-            <div className="grid lg:grid-cols-2 gap-6 mb-8 md:mb-12 items-start">
-              <h2 className="text-4xl md:text-5xl font-bold text-white" style={serifHeading}>
-                Explore our challenge tracks
-              </h2>
-              <p className="text-base leading-8 max-w-xl lg:justify-self-end" style={{ color: 'rgba(255,255,255,0.66)' }}>
-                Every track is intentionally shaped for a specific age range and technical depth.
-                Students grow progressively from exploration to advanced competition strategy.
-              </p>
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-12">
+              <div>
+                <p className="text-sm mb-3 font-medium" style={{ color: 'var(--accent)' }}>
+                  Our Partners
+                </p>
+                <h2 className="text-3xl md:text-5xl font-bold leading-tight" style={serifHeading}>
+                  Working together to transform STEM education.
+                </h2>
+              </div>
+              <Link to="/partners" className="text-sm font-semibold no-underline inline-flex items-center gap-2" style={{ color: 'var(--accent)' }}>
+                View all partners <ArrowRight size={14} />
+              </Link>
             </div>
           </FadeIn>
 
-          <div className="border-y" style={{ borderColor: 'rgba(255,255,255,0.15)' }}>
-            {dynamicTracks.map((track, index) => (
-              <FadeIn key={track.id} delay={index * 0.06}>
-                <Link
-                  to="/challenges"
-                  className="grid md:grid-cols-[86px_1fr_auto] gap-4 items-center py-8 no-underline border-b last:border-b-0"
-                  style={{ borderColor: 'rgba(255,255,255,0.15)' }}
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              {
+                name: 'Inspire Robotics Challenge',
+                role: 'Competition Partner',
+                desc: 'Running Kenya\'s premier student robotics competition across multiple age tracks, providing hands-on competitive experience for thousands of students.',
+              },
+              {
+                name: 'Stemtrix East Africa',
+                role: 'Education Partner',
+                desc: 'Delivering STEM curriculum, teacher training, and robotics equipment to schools across East Africa. A founding partner of the Federation.',
+              },
+              {
+                name: 'Ministry of Education',
+                role: 'Government Partner',
+                desc: 'Collaborating on policy frameworks for STEM integration into the national Competency-Based Curriculum and school standards.',
+              },
+            ].map((partner, index) => (
+              <FadeIn key={partner.name} delay={index * 0.1}>
+                <div
+                  className="p-7 rounded-xl border h-full"
+                  style={{ borderColor: 'var(--border-color)', background: 'var(--bg-card)' }}
                 >
-                  <span className="text-5xl font-bold" style={{ color: 'rgba(255,255,255,0.45)', ...serifHeading }}>
-                    0{index + 1}
+                  <span className="inline-block text-xs font-semibold px-3 py-1 rounded-full mb-4" style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
+                    {partner.role}
                   </span>
-                  <div>
-                    <h3 className="text-5xl md:text-7xl leading-none font-black" style={{ color: 'rgba(255,255,255,0.35)' }}>
-                      {track.name}
-                    </h3>
-                    <p className="text-sm mt-2" style={{ color: 'rgba(255,255,255,0.68)' }}>
-                      {track.ageRange} - {track.tagline}
-                    </p>
-                  </div>
-                  <span className="text-white/80 text-sm font-semibold inline-flex items-center gap-2">
-                    Open <ArrowRight size={14} />
-                  </span>
-                </Link>
+                  <h3 className="text-lg font-bold mb-3" style={serifHeading}>
+                    {partner.name}
+                  </h3>
+                  <p className="text-sm leading-7" style={{ color: 'var(--text-secondary)' }}>
+                    {partner.desc}
+                  </p>
+                </div>
               </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
+      {/* CTA */}
       <section className="px-4 py-20" style={{ background: 'var(--bg-secondary)' }}>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-4xl mx-auto text-center">
           <FadeIn>
-            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-10">
-              <div>
-                <p className="text-sm mb-3" style={{ color: 'var(--accent)' }}>
-                  Upcoming and active season milestones.
-                </p>
-                <h2 className="text-4xl md:text-6xl font-bold leading-[1.08]" style={serifHeading}>
-                  Events cut across the full competition journey.
-                </h2>
-              </div>
-              <Link to="/events" className="text-sm font-semibold no-underline inline-flex items-center gap-2" style={{ color: 'var(--accent)' }}>
-                View all events <ArrowRight size={14} />
+            <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-5" style={serifHeading}>
+              Ready to bring robotics to your school?
+            </h2>
+            <p className="text-base leading-8 max-w-2xl mx-auto mb-8" style={{ color: 'var(--text-secondary)' }}>
+              The Federation provides the framework, partnerships, and support to help any school in Kenya launch or grow a STEM and robotics program. Join the national movement today.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                to="/register"
+                className="px-8 py-3.5 rounded-lg font-semibold text-white no-underline text-sm flex items-center gap-2"
+                style={{ background: 'var(--accent)' }}
+              >
+                Register Your School <ArrowRight size={16} />
+              </Link>
+              <Link
+                to="/partners"
+                className="px-8 py-3.5 rounded-lg font-semibold no-underline text-sm flex items-center gap-2 border"
+                style={{ borderColor: 'var(--border-color)', color: 'var(--text-primary)' }}
+              >
+                Become a Partner <ArrowRight size={14} />
               </Link>
             </div>
           </FadeIn>
-
-          <div className="border-t" style={{ borderColor: '#d9d6d1' }}>
-            {upcomingEvents.map((event) => (
-              <FadeIn key={event.id}>
-                <article className="py-8 border-b grid lg:grid-cols-[220px_1fr_auto] gap-6 items-start" style={{ borderColor: '#d9d6d1' }}>
-                  <div>
-                    <p className="text-xs uppercase tracking-[0.18em] mb-2" style={{ color: 'var(--accent)' }}>
-                      {event.status}
-                    </p>
-                    <p className="text-2xl font-bold" style={serifHeading}>
-                      {new Date(event.date).toLocaleDateString('en-US', {
-                        month: 'short',
-                        day: 'numeric',
-                        year: 'numeric',
-                      })}
-                    </p>
-                  </div>
-                  <div>
-                    <h3 className="text-2xl font-bold mb-2" style={serifHeading}>
-                      {event.name}
-                    </h3>
-                    <p className="text-sm mb-3" style={{ color: '#2f3a46' }}>
-                      {event.location}
-                    </p>
-                    <p className="text-base leading-7" style={{ color: '#2f3a46' }}>
-                      {event.description}
-                    </p>
-                  </div>
-                  <div className="text-sm font-semibold" style={{ color: 'var(--accent)' }}>
-                    {event.teamsParticipated ? `${event.teamsParticipated} teams` : 'Program event'}
-                  </div>
-                </article>
-              </FadeIn>
-            ))}
-          </div>
         </div>
       </section>
     </div>

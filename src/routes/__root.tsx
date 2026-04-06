@@ -15,26 +15,26 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Inspire Robotics Challenge | Stemtrix EA',
+        title: 'Robotics Federation of Kenya | Advancing STEM & Robotics Nationwide',
       },
       {
         name: 'description',
         content:
-          'Inspire Robotics Challenge is East Africa\'s premier robotics and AI competition for students ages 6-18. Organized by Stemtrix EA, fostering innovation, teamwork, and STEM education.',
+          'The Robotics Federation of Kenya is the national governing body for robotics and STEM education. Coordinating competitions, curriculum integration, and partnerships to build Kenya\'s next generation of innovators.',
       },
       {
         name: 'keywords',
         content:
-          'robotics competition, STEM education, East Africa, Kenya, robotics challenge, AI competition, Stemtrix EA, student robotics, coding, engineering',
+          'robotics federation, Kenya, STEM education, robotics, AI, competitions, curriculum, schools, Inspire Robotics, Stemtrix EA, innovation, technology education',
       },
       {
         property: 'og:title',
-        content: 'Inspire Robotics Challenge | Stemtrix EA',
+        content: 'Robotics Federation of Kenya | Advancing STEM & Robotics Nationwide',
       },
       {
         property: 'og:description',
         content:
-          'Inspire Robotics Challenge is East Africa\'s premier robotics and AI competition for students ages 6-18. Organized by Stemtrix EA, fostering innovation, teamwork, and STEM education.',
+          'The Robotics Federation of Kenya is the national governing body for robotics and STEM education. Coordinating competitions, curriculum integration, and partnerships nationwide.',
       },
       {
         property: 'og:image',
@@ -50,12 +50,12 @@ export const Route = createRootRoute({
       },
       {
         name: 'twitter:title',
-        content: 'Inspire Robotics Challenge | Stemtrix EA',
+        content: 'Robotics Federation of Kenya',
       },
       {
         name: 'twitter:description',
         content:
-          'Inspire Robotics Challenge is East Africa\'s premier robotics and AI competition for students ages 6-18.',
+          'The national governing body for robotics and STEM education in Kenya.',
       },
       {
         name: 'twitter:image',

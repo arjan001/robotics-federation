@@ -3,50 +3,50 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 :root {
-  --red-50: #fef2f2;
-  --red-100: #fee2e2;
-  --red-200: #fecaca;
-  --red-300: #f9a8a8;
-  --red-400: #c24b3b;
-  --red-500: #b5423a;
-  --red-600: #a33830;
-  --red-700: #8b2e26;
-  --red-800: #6b231d;
-  --red-900: #4a1914;
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #1d4ed8;
+  --blue-500: #1e40af;
+  --blue-600: #1e3a8a;
+  --blue-700: #172554;
+  --blue-800: #0f172a;
+  --blue-900: #020617;
 
   --bg-primary: #ffffff;
-  --bg-secondary: #f5f5f3;
+  --bg-secondary: #f8fafc;
   --bg-card: #ffffff;
-  --bg-header: rgba(26, 26, 26, 0.95);
-  --bg-dark: #1a1a1a;
-  --bg-dark-secondary: #2a2a2a;
-  --text-primary: #1a1a1a;
-  --text-secondary: #555555;
-  --text-muted: #888888;
-  --text-on-dark: #f1f1f1;
-  --text-on-dark-secondary: #a0a0a0;
-  --border-color: #e5e5e5;
-  --border-hover: #cccccc;
-  --accent: #c24b3b;
-  --accent-hover: #a33830;
-  --accent-light: #fef2f2;
-  --olive: #3d4a3a;
-  --olive-light: #4a5a45;
+  --bg-header: rgba(255, 255, 255, 0.97);
+  --bg-dark: #0f172a;
+  --bg-dark-secondary: #1e293b;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+  --text-on-dark: #f1f5f9;
+  --text-on-dark-secondary: #94a3b8;
+  --border-color: #e2e8f0;
+  --border-hover: #cbd5e1;
+  --accent: #1d4ed8;
+  --accent-hover: #1e40af;
+  --accent-light: #eff6ff;
+  --green: #059669;
+  --green-light: #10b981;
 }
 
 .dark {
-  --bg-primary: #1a1a1a;
-  --bg-secondary: #2a2a2a;
-  --bg-card: #2a2a2a;
-  --bg-header: rgba(26, 26, 26, 0.95);
-  --text-primary: #f1f1f1;
-  --text-secondary: #a0a0a0;
-  --text-muted: #666666;
-  --border-color: #3a3a3a;
-  --border-hover: #4a4a4a;
-  --accent: #c24b3b;
-  --accent-hover: #d4554a;
-  --accent-light: #3a2020;
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-card: #1e293b;
+  --bg-header: rgba(15, 23, 42, 0.97);
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --border-color: #334155;
+  --border-hover: #475569;
+  --accent: #3b82f6;
+  --accent-hover: #60a5fa;
+  --accent-light: #1e3a5f;
 }
 
 body {
@@ -68,7 +68,8 @@ code {
   background: var(--bg-header);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
 /* Cards */

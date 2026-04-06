@@ -17,10 +17,10 @@ function OrganizersPage() {
       {/* Page banner */}
       <section className="py-24 px-4 text-center" style={{ background: 'var(--bg-dark)' }}>
         <FadeIn>
-          <p className="text-sm text-white/50 uppercase tracking-widest mb-4">Home &mdash; Team</p>
-          <h1 className="text-4xl md:text-6xl font-bold text-white">Our Team</h1>
+          <p className="text-sm text-white/50 uppercase tracking-widest mb-4">Home &mdash; Leadership</p>
+          <h1 className="text-4xl md:text-6xl font-bold text-white">Federation Leadership</h1>
           <p className="mt-4 max-w-2xl mx-auto" style={{ color: 'var(--text-on-dark-secondary)' }}>
-            The dedicated professionals at Stemtrix EA who make the Inspire Robotics Challenge a reality.
+            The team leading the Robotics Federation of Kenya and driving STEM education forward across the nation.
           </p>
         </FadeIn>
       </section>
@@ -34,8 +34,8 @@ function OrganizersPage() {
                 <p className="text-4xl md:text-5xl font-bold mb-1" style={{ color: 'var(--accent)' }}>
                   <Users size={32} className="inline-block mr-2" />{organizerRecords.length}+
                 </p>
-                <p className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>Core Team Members</p>
-                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Leading the challenge forward</p>
+                <p className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>Leadership Team</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Guiding the Federation forward</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.1}>
@@ -44,7 +44,7 @@ function OrganizersPage() {
                   <Award size={32} className="inline-block mr-2" />85+
                 </p>
                 <p className="font-semibold text-sm" style={{ color: 'var(--text-primary)' }}>Volunteers Engaged</p>
-                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Judges, mentors, and coordinators</p>
+                <p className="text-xs mt-1" style={{ color: 'var(--text-muted)' }}>Volunteers, judges, and mentors</p>
               </div>
             </FadeIn>
             <FadeIn delay={0.2}>
@@ -66,10 +66,10 @@ function OrganizersPage() {
           <FadeIn>
             <div className="text-center mb-14">
               <h2 className="text-3xl md:text-4xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
-                Meet the Team
+                Meet the Leadership
               </h2>
               <p className="max-w-xl mx-auto text-sm" style={{ color: 'var(--text-muted)' }}>
-                The people behind every successful season of the Inspire Robotics Challenge.
+                The people leading the Robotics Federation of Kenya and its national programs.
               </p>
             </div>
           </FadeIn>
@@ -88,7 +88,7 @@ function OrganizersPage() {
                   <div
                     className="w-20 h-20 rounded-full flex items-center justify-center mb-4"
                     style={{
-                      background: 'rgba(194, 75, 59, 0.1)',
+                      background: 'var(--accent-light)',
                       color: 'var(--accent)',
                     }}
                   >
@@ -102,7 +102,7 @@ function OrganizersPage() {
                   <span
                     className="inline-flex items-center text-xs px-3 py-1 rounded-full mb-4"
                     style={{
-                      background: 'rgba(194, 75, 59, 0.08)',
+                      background: 'var(--accent-light)',
                       color: 'var(--accent)',
                     }}
                   >
@@ -127,7 +127,7 @@ function OrganizersPage() {
               Want to volunteer?
             </h3>
             <p className="mb-6 text-sm" style={{ color: 'var(--text-secondary)' }}>
-              Join our team of volunteers as a judge, mentor, or event coordinator and help shape the future of STEM in Kenya.
+              Join the Federation as a volunteer judge, mentor, or regional coordinator and help shape the future of STEM in Kenya.
             </p>
             <a
               href="/register"

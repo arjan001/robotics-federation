@@ -94,7 +94,7 @@ function AboutPage() {
             <div className="relative min-h-[560px] overflow-hidden rounded-xl" style={{ border: '1px solid var(--border-color)' }}>
               <img
                 src="/education-tech-royaltyfree.jpg"
-                alt="STEM education in Kenya"
+                alt="Robotics and STEM education program in Kenya"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(160deg, rgba(15,23,42,0.85), rgba(15,23,42,0.2) 58%, rgba(15,23,42,0.7))' }} />
@@ -258,7 +258,7 @@ function AboutPage() {
             <div className="relative min-h-[560px] overflow-hidden rounded-xl" style={{ border: '1px solid var(--border-color)' }}>
               <img
                 src="/students-robotics-royaltyfree.jpg"
-                alt="Students in robotics program"
+                alt="Kenyan students participating in robotics program"
                 className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.78))' }} />

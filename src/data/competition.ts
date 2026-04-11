@@ -24,7 +24,7 @@ export const competitionTracks: CompetitionTrack[] = [
     ageRange: 'Ages 6–10 (Lower Primary)',
     description:
       'The Discovery program introduces young learners to the fundamentals of robotics, coding, and scientific thinking through hands-on building and creative play. Aligned with the CBC framework for lower primary, students develop curiosity, teamwork, and basic engineering concepts.',
-    color: '#1d4ed8',
+    color: '#c41e2a',
     icon: '🔍',
     missions: [
       'Build a simple machine that solves a classroom problem',
@@ -78,7 +78,7 @@ export const competitionTracks: CompetitionTrack[] = [
     ageRange: 'Ages 11–14 (Upper Primary / Junior Secondary)',
     description:
       'The Innovators program challenges students to identify real problems in their communities and engineer robotic solutions. Teams research, design, build, and program autonomous robots while developing core STEM skills aligned with the CBC upper primary and junior secondary curriculum.',
-    color: '#1e40af',
+    color: '#006b3f',
     icon: '💡',
     missions: [
       'Design an autonomous robot for agricultural assistance',

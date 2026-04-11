@@ -17,24 +17,30 @@ function HomePage() {
     <div>
       {/* Hero section */}
       <section className="section-full hero-parallax px-4 relative">
-        <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-4xl mx-auto w-full py-20 text-center relative z-10">
           <FadeIn delay={0.1}>
+            <img
+              src="/rfk-logo.png"
+              alt="Robotics Federation of Kenya"
+              className="h-28 md:h-36 w-auto mx-auto mb-8 object-contain drop-shadow-lg"
+            />
+          </FadeIn>
+          <FadeIn delay={0.2}>
             <p className="text-sm md:text-base font-medium tracking-widest uppercase mb-6 text-white/70">
               The National Governing Body for Robotics & STEM Education
             </p>
           </FadeIn>
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.3}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
               Robotics Federation of Kenya
             </h1>
           </FadeIn>
-          <FadeIn delay={0.3}>
+          <FadeIn delay={0.4}>
             <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-white/90">
               Uniting schools, organizations, and industry partners to build a robust STEM and robotics ecosystem that prepares every Kenyan learner for the future.
             </p>
           </FadeIn>
-          <FadeIn delay={0.4}>
+          <FadeIn delay={0.5}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/about"

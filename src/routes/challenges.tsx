@@ -137,7 +137,7 @@ function ChallengesPage() {
             <div className="relative min-h-[420px] overflow-hidden" style={{ border: '1px solid #d9d6d1' }}>
               <img
                 src="/education-tech-royaltyfree.jpg"
-                alt="Season challenge theme"
+                alt="Students working on robotics sustainability challenge in Kenya"
                 className="absolute inset-0 h-full w-full object-cover"
               />
               <div className="absolute inset-0" style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0.12), rgba(0,0,0,0.76))' }} />

@@ -89,18 +89,11 @@ export function Footer() {
             {/* Brand column */}
             <div>
               <div className="flex items-center gap-3 mb-4">
-                <div
-                  className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm"
-                  style={{ background: 'var(--accent)' }}
-                >
-                  RFK
-                </div>
-                <div>
-                  <h3 className="text-lg font-bold text-white leading-tight">
-                    Robotics Federation
-                  </h3>
-                  <p className="text-xs" style={{ color: 'rgba(255,255,255,0.5)' }}>of Kenya</p>
-                </div>
+                <img
+                  src="/rfk-logo.png"
+                  alt="Robotics Federation of Kenya"
+                  className="h-14 w-auto object-contain"
+                />
               </div>
               <p className="text-sm leading-relaxed mb-6 max-w-sm" style={{ color: 'rgba(255,255,255,0.55)' }}>
                 The national governing body for robotics and STEM education in Kenya. Coordinating programs, competitions, and curriculum integration to prepare the next generation of innovators.

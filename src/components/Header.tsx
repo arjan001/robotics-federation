@@ -41,20 +41,11 @@ export function Header() {
         <div className="flex items-center justify-between h-18">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 no-underline">
-            <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold text-sm"
-              style={{ background: 'var(--accent)' }}
-            >
-              RFK
-            </div>
-            <div className="hidden sm:block">
-              <span className="font-bold text-base leading-tight block" style={{ color: 'var(--text-primary)' }}>
-                Robotics Federation
-              </span>
-              <span className="text-xs leading-tight block" style={{ color: 'var(--text-muted)' }}>
-                of Kenya
-              </span>
-            </div>
+            <img
+              src="/rfk-logo.png"
+              alt="Robotics Federation of Kenya"
+              className="h-12 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop nav */}

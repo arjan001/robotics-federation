@@ -38,13 +38,13 @@ export function Header() {
   return (
     <header className="glass-header sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-18">
+        <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3 no-underline">
             <img
               src="/rfk-logo.png"
               alt="Robotics Federation of Kenya"
-              className="h-12 w-auto object-contain"
+              className="h-16 w-auto object-contain"
             />
           </Link>
 

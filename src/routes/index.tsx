@@ -1,7 +1,7 @@
 import { Link, createFileRoute } from '@tanstack/react-router'
 import { FadeIn } from '@/components/FadeIn'
 import { ArrowRight, Target, Eye, Lightbulb, GraduationCap, Users, Globe, Award, BookOpen, Cpu, School, Handshake } from 'lucide-react'
-import type { CSSProperties } from 'react'
+import React, { type CSSProperties } from 'react'
 
 export const Route = createFileRoute('/')({
   component: HomePage,
@@ -17,24 +17,23 @@ function HomePage() {
     <div>
       {/* Hero section */}
       <section className="section-full hero-parallax px-4 relative">
-        <div className="absolute inset-0 bg-black/50" />
         <div className="max-w-4xl mx-auto w-full py-20 text-center relative z-10">
-          <FadeIn delay={0.1}>
+          <FadeIn delay={0.2}>
             <p className="text-sm md:text-base font-medium tracking-widest uppercase mb-6 text-white/70">
               The National Governing Body for Robotics & STEM Education
             </p>
           </FadeIn>
-          <FadeIn delay={0.2}>
+          <FadeIn delay={0.3}>
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-tight text-white">
               Robotics Federation of Kenya
             </h1>
           </FadeIn>
-          <FadeIn delay={0.3}>
+          <FadeIn delay={0.4}>
             <p className="text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed text-white/90">
               Uniting schools, organizations, and industry partners to build a robust STEM and robotics ecosystem that prepares every Kenyan learner for the future.
             </p>
           </FadeIn>
-          <FadeIn delay={0.4}>
+          <FadeIn delay={0.5}>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <Link
                 to="/about"
@@ -216,35 +215,43 @@ function HomePage() {
             </h2>
           </FadeIn>
 
-          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
+          <div className="grid sm:grid-cols-2 xl:grid-cols-4 gap-8 mt-12">
             {[
               {
                 icon: <GraduationCap size={24} />,
                 title: 'Universal Access',
                 desc: 'Ensure every county in Kenya has at least 5 schools running structured robotics and STEM programs by 2028.',
+                hue: 'rgba(196, 30, 42, 0.06)',
+                hueAccent: 'rgba(196, 30, 42, 0.12)',
               },
               {
                 icon: <BookOpen size={24} />,
                 title: 'Curriculum Alignment',
                 desc: 'Complete integration of robotics modules into the CBC framework across all school levels by 2027.',
+                hue: 'rgba(30, 64, 175, 0.06)',
+                hueAccent: 'rgba(30, 64, 175, 0.12)',
               },
               {
                 icon: <Award size={24} />,
                 title: 'Competition Excellence',
                 desc: 'Grow national competitions to include 1,000+ teams and achieve representation in international robotics events.',
+                hue: 'rgba(5, 150, 105, 0.06)',
+                hueAccent: 'rgba(5, 150, 105, 0.12)',
               },
               {
                 icon: <Cpu size={24} />,
                 title: 'Teacher Capacity',
                 desc: 'Train 5,000+ teachers in robotics and STEM pedagogy to create sustainable in-school programs nationwide.',
+                hue: 'rgba(147, 51, 234, 0.06)',
+                hueAccent: 'rgba(147, 51, 234, 0.12)',
               },
             ].map((item, index) => (
               <FadeIn key={item.title} delay={index * 0.08}>
                 <div
-                  className="p-7 rounded-xl border h-full"
-                  style={{ borderColor: 'var(--border-color)', background: 'var(--bg-card)' }}
+                  className="strategic-goal-card group relative p-7 rounded-2xl h-full cursor-default"
+                  style={{ '--card-hue': item.hue, '--card-hue-accent': item.hueAccent } as React.CSSProperties}
                 >
-                  <div className="w-12 h-12 rounded-lg flex items-center justify-center mb-5" style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
+                  <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-colors duration-300" style={{ background: 'var(--accent-light)', color: 'var(--accent)' }}>
                     {item.icon}
                   </div>
                   <h3 className="text-lg font-bold mb-3" style={serifHeading}>

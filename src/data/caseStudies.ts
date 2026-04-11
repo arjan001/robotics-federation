@@ -25,7 +25,7 @@ export const caseStudies: CaseStudy[] = [
       'Student engagement in STEM subjects increased by 45%',
       '60 teachers certified in robotics pedagogy',
     ],
-    accent: '#1d4ed8',
+    accent: '#c41e2a',
   },
   {
     id: 'robotics-bootcamp-network',
@@ -42,7 +42,7 @@ export const caseStudies: CaseStudy[] = [
       'Student retention in STEM clubs increased to 88%',
       'Regional competition participation grew by 120%',
     ],
-    accent: '#1e40af',
+    accent: '#006b3f',
   },
   {
     id: 'teacher-training-program',
@@ -59,7 +59,7 @@ export const caseStudies: CaseStudy[] = [
       'Teacher confidence in STEM instruction improved by 67%',
       'Certified teachers launched robotics clubs in 85% of their schools',
     ],
-    accent: '#3b82f6',
+    accent: '#c41e2a',
   },
   {
     id: 'county-expansion-initiative',
@@ -76,7 +76,7 @@ export const caseStudies: CaseStudy[] = [
       '50 new schools onboarded in underserved areas',
       'Regional competition circuits established in 3 zones',
     ],
-    accent: '#1d4ed8',
+    accent: '#006b3f',
   },
   {
     id: 'inclusive-stem-pathways',
@@ -93,6 +93,6 @@ export const caseStudies: CaseStudy[] = [
       'Rural school participation expanded from 6 to 30 campuses',
       'Scholarship recipients grew by 46% year over year',
     ],
-    accent: '#1e40af',
+    accent: '#c41e2a',
   },
 ]

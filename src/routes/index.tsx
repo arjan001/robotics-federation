@@ -18,13 +18,6 @@ function HomePage() {
       {/* Hero section */}
       <section className="section-full hero-parallax px-4 relative">
         <div className="max-w-4xl mx-auto w-full py-20 text-center relative z-10">
-          <FadeIn delay={0.1}>
-            <img
-              src="/rfk-logo.png"
-              alt="Robotics Federation of Kenya"
-              className="h-28 md:h-36 w-auto mx-auto mb-8 object-contain drop-shadow-lg"
-            />
-          </FadeIn>
           <FadeIn delay={0.2}>
             <p className="text-sm md:text-base font-medium tracking-widest uppercase mb-6 text-white/70">
               The National Governing Body for Robotics & STEM Education
